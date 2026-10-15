@@ -1,3 +1,5 @@
+import ItemCard from "../common-components/ItemCard";
+
 export default function Catalogue() {
   return (
     <section className="page" id="page-catalogue">
@@ -27,54 +29,27 @@ export default function Catalogue() {
                 <span className="cat-count">3 items</span>
               </div>
               <div className="product-grid">
-                <article className="product-card reveal">
-                  <div className="frame">
-                    <img
-                      src="/images/lumen-l1.jpg"
-                      alt="A chair with a loose leg"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="product-info">
-                    <div>
-                      <h3 className="product-name">Chair with a loose leg</h3>
-                      <p className="product-cat">Sofia</p>
-                    </div>
-                    <span className="product-price">Needs help</span>
-                  </div>
-                </article>
-                <article className="product-card reveal">
-                  <div className="frame">
-                    <img
-                      src="/images/lumen-l2.jpg"
-                      alt="A sofa with torn fabric"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="product-info">
-                    <div>
-                      <h3 className="product-name">Sofa with torn fabric</h3>
-                      <p className="product-cat">Burgas</p>
-                    </div>
-                    <span className="product-price">Needs help</span>
-                  </div>
-                </article>
-                <article className="product-card reveal">
-                  <div className="frame">
-                    <img
-                      src="/images/lumen-l3.jpg"
-                      alt="A daybed with a broken slat"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="product-info">
-                    <div>
-                      <h3 className="product-name">Daybed with a broken slat</h3>
-                      <p className="product-cat">Ruse</p>
-                    </div>
-                    <span className="product-price">Fixed</span>
-                  </div>
-                </article>
+                <ItemCard
+                  image="/images/lumen-l1.jpg"
+                  title="Chair with a loose leg"
+                  category="Furniture"
+                  city="Sofia"
+                  status="Needs help"
+                />
+                <ItemCard
+                  image="/images/lumen-l2.jpg"
+                  title="Sofa with torn fabric"
+                  category="Furniture"
+                  city="Burgas"
+                  status="Needs help"
+                />
+                <ItemCard
+                  image="/images/lumen-l3.jpg"
+                  title="Daybed with a broken slat"
+                  category="Furniture"
+                  city="Ruse"
+                  status="Fixed"
+                />
               </div>
             </div>
           </div>
@@ -86,54 +61,27 @@ export default function Catalogue() {
                 <span className="cat-count">3 items</span>
               </div>
               <div className="product-grid">
-                <article className="product-card reveal">
-                  <div className="frame">
-                    <img
-                      src="/images/lumen-t1.jpg"
-                      alt="An old dining table"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="product-info">
-                    <div>
-                      <h3 className="product-name">Old dining table</h3>
-                      <p className="product-cat">Plovdiv</p>
-                    </div>
-                    <span className="product-price">Free to take</span>
-                  </div>
-                </article>
-                <article className="product-card reveal">
-                  <div className="frame">
-                    <img
-                      src="/images/lumen-t2.jpg"
-                      alt="A small side table"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="product-info">
-                    <div>
-                      <h3 className="product-name">Small side table</h3>
-                      <p className="product-cat">Sofia</p>
-                    </div>
-                    <span className="product-price">Free to take</span>
-                  </div>
-                </article>
-                <article className="product-card reveal">
-                  <div className="frame">
-                    <img
-                      src="/images/lumen-t3.jpg"
-                      alt="A console table with a stuck drawer"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="product-info">
-                    <div>
-                      <h3 className="product-name">Console with a stuck drawer</h3>
-                      <p className="product-cat">Varna</p>
-                    </div>
-                    <span className="product-price">Given away</span>
-                  </div>
-                </article>
+                <ItemCard
+                  image="/images/lumen-t1.jpg"
+                  title="Old dining table"
+                  category="Furniture"
+                  city="Plovdiv"
+                  status="Free to take"
+                />
+                <ItemCard
+                  image="/images/lumen-t2.jpg"
+                  title="Small side table"
+                  category="Furniture"
+                  city="Sofia"
+                  status="Free to take"
+                />
+                <ItemCard
+                  image="/images/lumen-t3.jpg"
+                  title="Console with a stuck drawer"
+                  category="Furniture"
+                  city="Varna"
+                  status="Given away"
+                />
               </div>
             </div>
           </div>
@@ -145,54 +93,27 @@ export default function Catalogue() {
                 <span className="cat-count">3 items</span>
               </div>
               <div className="product-grid">
-                <article className="product-card reveal">
-                  <div className="frame">
-                    <img
-                      src="/images/lumen-g1.jpg"
-                      alt="A floor lamp that does not turn on"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="product-info">
-                    <div>
-                      <h3 className="product-name">Lamp that won't turn on</h3>
-                      <p className="product-cat">Varna</p>
-                    </div>
-                    <span className="product-price">Needs help</span>
-                  </div>
-                </article>
-                <article className="product-card reveal">
-                  <div className="frame">
-                    <img
-                      src="/images/lumen-g2.jpg"
-                      alt="A pendant light that flickers"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="product-info">
-                    <div>
-                      <h3 className="product-name">Flickering pendant light</h3>
-                      <p className="product-cat">Sofia</p>
-                    </div>
-                    <span className="product-price">Fixed</span>
-                  </div>
-                </article>
-                <article className="product-card reveal">
-                  <div className="frame">
-                    <img
-                      src="/images/lumen-g3.jpg"
-                      alt="A wall lamp with a broken switch"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="product-info">
-                    <div>
-                      <h3 className="product-name">Wall lamp with a broken switch</h3>
-                      <p className="product-cat">Pleven</p>
-                    </div>
-                    <span className="product-price">Needs help</span>
-                  </div>
-                </article>
+                <ItemCard
+                  image="/images/lumen-g1.jpg"
+                  title="Lamp that won't turn on"
+                  category="Electronics"
+                  city="Varna"
+                  status="Needs help"
+                />
+                <ItemCard
+                  image="/images/lumen-g2.jpg"
+                  title="Flickering pendant light"
+                  category="Electronics"
+                  city="Sofia"
+                  status="Fixed"
+                />
+                <ItemCard
+                  image="/images/lumen-g3.jpg"
+                  title="Wall lamp with a broken switch"
+                  category="Electronics"
+                  city="Pleven"
+                  status="Needs help"
+                />
               </div>
             </div>
           </div>
@@ -204,54 +125,27 @@ export default function Catalogue() {
                 <span className="cat-count">3 items</span>
               </div>
               <div className="product-grid">
-                <article className="product-card reveal">
-                  <div className="frame">
-                    <img
-                      src="/images/lumen-x1.jpg"
-                      alt="A woollen blanket with a hole"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="product-info">
-                    <div>
-                      <h3 className="product-name">Blanket with a hole</h3>
-                      <p className="product-cat">Stara Zagora</p>
-                    </div>
-                    <span className="product-price">Needs help</span>
-                  </div>
-                </article>
-                <article className="product-card reveal">
-                  <div className="frame">
-                    <img
-                      src="/images/lumen-x2.jpg"
-                      alt="A rug with frayed edges"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="product-info">
-                    <div>
-                      <h3 className="product-name">Rug with frayed edges</h3>
-                      <p className="product-cat">Sofia</p>
-                    </div>
-                    <span className="product-price">Free to take</span>
-                  </div>
-                </article>
-                <article className="product-card reveal">
-                  <div className="frame">
-                    <img
-                      src="/images/lumen-x3.jpg"
-                      alt="Linen curtains with broken hooks"
-                      loading="lazy"
-                    />
-                  </div>
-                  <div className="product-info">
-                    <div>
-                      <h3 className="product-name">Curtains with broken hooks</h3>
-                      <p className="product-cat">Plovdiv</p>
-                    </div>
-                    <span className="product-price">Fixed</span>
-                  </div>
-                </article>
+                <ItemCard
+                  image="/images/lumen-x1.jpg"
+                  title="Blanket with a hole"
+                  category="Textiles & clothes"
+                  city="Stara Zagora"
+                  status="Needs help"
+                />
+                <ItemCard
+                  image="/images/lumen-x2.jpg"
+                  title="Rug with frayed edges"
+                  category="Textiles & clothes"
+                  city="Sofia"
+                  status="Free to take"
+                />
+                <ItemCard
+                  image="/images/lumen-x3.jpg"
+                  title="Curtains with broken hooks"
+                  category="Textiles & clothes"
+                  city="Plovdiv"
+                  status="Fixed"
+                />
               </div>
             </div>
           </div>
