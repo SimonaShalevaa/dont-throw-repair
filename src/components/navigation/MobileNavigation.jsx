@@ -112,6 +112,21 @@ export default function MobileNavigation() {
             Share an item
           </a>
         </li>
+        <li>
+          <a className="m-link" href="#login">
+            Login
+          </a>
+        </li>
+        <li>
+          <a className="m-link" href="#register">
+            Register
+          </a>
+        </li>
+        <li>
+          <a className="m-link" href="#logout">
+            Logout
+          </a>
+        </li>
       </ul>
     </nav>
   );

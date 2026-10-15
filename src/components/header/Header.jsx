@@ -120,6 +120,11 @@ export default function Header() {
                 Register
               </a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#logout">
+                Logout
+              </a>
+            </li>
           </ul>
           <a href="#inquire" className="nav-cta" data-route="inquire">
             + Share an item
