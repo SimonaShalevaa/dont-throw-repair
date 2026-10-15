@@ -1,17 +1,19 @@
+import { Link } from "react-router";
+
 export default function MobileNavigation() {
   return (
     <nav className="mobile-nav" id="mobileNav" aria-label="Mobile">
       <ul>
         <li>
-          <a className="m-link" href="#home" data-route="home">
+          <Link className="m-link" to="/">
             Home
-          </a>
+          </Link>
         </li>
         <li>
           <div className="m-drop-head">
-            <a className="m-link" href="#catalogue" data-route="catalogue">
+            <Link className="m-link" to="/catalog">
               Catalog
-            </a>
+            </Link>
             <button
               className="m-sub-toggle"
               aria-expanded="false"
@@ -22,48 +24,32 @@ export default function MobileNavigation() {
           </div>
           <ul className="m-sub">
             <li>
-              <a
-                href="#catalogue"
-                data-route="catalogue"
-                data-anchor="cat-lounge"
-              >
+              <Link to="/catalog">
                 Furniture
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#catalogue"
-                data-route="catalogue"
-                data-anchor="cat-tables"
-              >
+              <Link to="/catalog">
                 Free to take
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#catalogue"
-                data-route="catalogue"
-                data-anchor="cat-lighting"
-              >
+              <Link to="/catalog">
                 Electronics
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#catalogue"
-                data-route="catalogue"
-                data-anchor="cat-textiles"
-              >
+              <Link to="/catalog">
                 Textiles &amp; clothes
-              </a>
+              </Link>
             </li>
           </ul>
         </li>
         <li>
           <div className="m-drop-head">
-            <a className="m-link" href="#atelier" data-route="atelier">
+            <Link className="m-link" to="/repair-tips">
               Repair Tips
-            </a>
+            </Link>
             <button
               className="m-sub-toggle"
               aria-expanded="false"
@@ -74,58 +60,46 @@ export default function MobileNavigation() {
           </div>
           <ul className="m-sub">
             <li>
-              <a
-                href="#atelier"
-                data-route="atelier"
-                data-anchor="at-philosophy"
-              >
+              <Link to="/repair-tips">
                 Before you throw it away
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#atelier"
-                data-route="atelier"
-                data-anchor="at-provenance"
-              >
+              <Link to="/repair-tips">
                 Basic tool kit
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="#atelier"
-                data-route="atelier"
-                data-anchor="at-woodcraft"
-              >
+              <Link to="/repair-tips">
                 Common fixes
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#atelier" data-route="atelier" data-anchor="at-press">
+              <Link to="/repair-tips">
                 Community
-              </a>
+              </Link>
             </li>
           </ul>
         </li>
         <li>
-          <a className="m-link" href="#inquire" data-route="inquire">
+          <Link className="m-link" to="/create">
             Share an item
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="m-link" href="#login">
+          <Link className="m-link" to="/login">
             Login
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="m-link" href="#register">
+          <Link className="m-link" to="/register">
             Register
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="m-link" href="#logout">
+          <Link className="m-link" to="/logout">
             Logout
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

@@ -1,12 +1,14 @@
+import { Link } from "react-router";
+
 export default function Footer() {
   return (
     <footer className="site-footer">
         <div className="container">
           <div className="footer-grid">
             <div className="footer-brand">
-              <a href="#home" className="brand" data-route="home">
+              <Link to="/" className="brand">
                 Don't throw <span>//</span> repair or share
-              </a>
+              </Link>
               <p>
                 Repair, reuse, share. Keep things out of the landfill and help
                 each other.
@@ -16,40 +18,24 @@ export default function Footer() {
               <h4>Catalog</h4>
               <ul>
                 <li>
-                  <a
-                    href="#catalogue"
-                    data-route="catalogue"
-                    data-anchor="cat-lounge"
-                  >
+                  <Link to="/catalog">
                     Furniture
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#catalogue"
-                    data-route="catalogue"
-                    data-anchor="cat-tables"
-                  >
+                  <Link to="/catalog">
                     Free to take
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#catalogue"
-                    data-route="catalogue"
-                    data-anchor="cat-lighting"
-                  >
+                  <Link to="/catalog">
                     Electronics
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#catalogue"
-                    data-route="catalogue"
-                    data-anchor="cat-textiles"
-                  >
+                  <Link to="/catalog">
                     Textiles &amp; clothes
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -57,40 +43,24 @@ export default function Footer() {
               <h4>Repair Tips</h4>
               <ul>
                 <li>
-                  <a
-                    href="#atelier"
-                    data-route="atelier"
-                    data-anchor="at-philosophy"
-                  >
+                  <Link to="/repair-tips">
                     Before you throw it away
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#atelier"
-                    data-route="atelier"
-                    data-anchor="at-provenance"
-                  >
+                  <Link to="/repair-tips">
                     Basic tool kit
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#atelier"
-                    data-route="atelier"
-                    data-anchor="at-woodcraft"
-                  >
+                  <Link to="/repair-tips">
                     Common fixes
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#atelier"
-                    data-route="atelier"
-                    data-anchor="at-press"
-                  >
+                  <Link to="/repair-tips">
                     Community
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -98,19 +68,19 @@ export default function Footer() {
               <h4>Account</h4>
               <ul>
                 <li>
-                  <a href="#inquire" data-route="inquire">
+                  <Link to="/login">
                     Login
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#inquire" data-route="inquire">
+                  <Link to="/register">
                     Register
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#inquire" data-route="inquire">
+                  <Link to="/create">
                     Share an item
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

@@ -1,134 +1,94 @@
+import { Link } from "react-router";
+
 export default function Header() {
   return (
     <header className="site-header">
       <div className="container header-inner">
-        <a href="#home" className="brand" data-route="home">
+        <Link to="/" className="brand">
           Don't throw <span>//</span> repair or share
-        </a>
+        </Link>
         <nav className="main-nav" aria-label="Primary">
           <ul className="nav-list">
             <li className="nav-item">
-              <a className="nav-link" href="#home" data-route="home">
+              <Link className="nav-link" to="/">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-item has-drop">
-              <a
-                className="nav-link"
-                href="#catalogue"
-                data-route="catalogue"
-                aria-haspopup="true"
-              >
+              <Link className="nav-link" to="/catalog" aria-haspopup="true">
                 Catalog <span className="caret" />
-              </a>
+              </Link>
               <ul className="dropdown">
                 <li className="drop-label">Categories</li>
                 <li>
-                  <a
-                    href="#catalogue"
-                    data-route="catalogue"
-                    data-anchor="cat-lounge"
-                  >
+                  <Link to="/catalog">
                     Furniture
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#catalogue"
-                    data-route="catalogue"
-                    data-anchor="cat-lighting"
-                  >
+                  <Link to="/catalog">
                     Electronics
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#catalogue"
-                    data-route="catalogue"
-                    data-anchor="cat-textiles"
-                  >
+                  <Link to="/catalog">
                     Textiles &amp; clothes
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#catalogue"
-                    data-route="catalogue"
-                    data-anchor="cat-tables"
-                  >
+                  <Link to="/catalog">
                     Free to take
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="nav-item has-drop">
-              <a
-                className="nav-link"
-                href="#atelier"
-                data-route="atelier"
-                aria-haspopup="true"
-              >
+              <Link className="nav-link" to="/repair-tips" aria-haspopup="true">
                 Repair Tips <span className="caret" />
-              </a>
+              </Link>
               <ul className="dropdown">
                 <li className="drop-label">Guides</li>
                 <li>
-                  <a
-                    href="#atelier"
-                    data-route="atelier"
-                    data-anchor="at-philosophy"
-                  >
+                  <Link to="/repair-tips">
                     Before you throw it away
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#atelier"
-                    data-route="atelier"
-                    data-anchor="at-provenance"
-                  >
+                  <Link to="/repair-tips">
                     Basic tool kit
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#atelier"
-                    data-route="atelier"
-                    data-anchor="at-woodcraft"
-                  >
+                  <Link to="/repair-tips">
                     Common fixes
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    href="#atelier"
-                    data-route="atelier"
-                    data-anchor="at-press"
-                  >
+                  <Link to="/repair-tips">
                     Community
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#inquire" data-route="inquire">
+              <Link className="nav-link" to="/login">
                 Login
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#inquire" data-route="inquire">
+              <Link className="nav-link" to="/register">
                 Register
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#logout">
+              <Link className="nav-link" to="/logout">
                 Logout
-              </a>
+              </Link>
             </li>
           </ul>
-          <a href="#inquire" className="nav-cta" data-route="inquire">
+          <Link to="/create" className="nav-cta">
             + Share an item
-          </a>
+          </Link>
         </nav>
         <button
           className="menu-toggle"

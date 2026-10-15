@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 import ItemCard from "../common-components/ItemCard";
 
 export default function Hero() {
@@ -20,16 +22,12 @@ export default function Hero() {
               who will.
             </p>
             <div className="hero-actions">
-              <a
-                href="#catalogue"
-                className="btn btn-solid"
-                data-route="catalogue"
-              >
+              <Link to="/catalog" className="btn btn-solid">
                 Browse items
-              </a>
-              <a href="#atelier" className="btn" data-route="atelier">
+              </Link>
+              <Link to="/create" className="btn">
                 Share an item
-              </a>
+              </Link>
             </div>
           </div>
           <div className="hero-visual reveal">
@@ -79,9 +77,9 @@ export default function Hero() {
                 Waiting for your advice
               </h2>
             </div>
-            <a href="#catalogue" className="text-link" data-route="catalogue">
+            <Link to="/catalog" className="text-link">
               See all items
-            </a>
+            </Link>
           </div>
           <div className="product-grid">
             <ItemCard
@@ -167,14 +165,9 @@ export default function Hero() {
             <p className="lede" style={{ marginTop: 16 }}>
               Check the free items. Maybe your next project is waiting there.
             </p>
-            <a
-              href="#atelier"
-              className="text-link"
-              style={{ marginTop: 34 }}
-              data-route="atelier"
-            >
+            <Link to="/catalog" className="text-link" style={{ marginTop: 34 }}>
               See free items
-            </a>
+            </Link>
           </div>
         </div>
       </div>

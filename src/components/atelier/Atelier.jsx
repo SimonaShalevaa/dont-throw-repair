@@ -1,3 +1,5 @@
+import { Link } from "react-router";
+
 export default function Atelier() {
   return (
     <section className="page" id="page-atelier">
@@ -110,14 +112,13 @@ export default function Atelier() {
                   A flat bike tyre, a broken zip or a loose door handle are
                   quick fixes too. Post a photo and someone will show you how.
                 </p>
-                <a
-                  href="#inquire"
+                <Link
+                  to="/create"
                   className="text-link"
                   style={{ marginTop: 34 }}
-                  data-route="inquire"
                 >
                   Ask for advice
-                </a>
+                </Link>
               </div>
             </div>
           </div>
