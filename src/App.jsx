@@ -2,7 +2,7 @@ import Atelier from "./components/atelier/Atelier";
 import Catalogue from "./components/catalogue/Catalogue";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
-import Home from "./components/home/Home";
+import Hero from "./components/home/Hero";
 import Inquire from "./components/inquire/Inquire";
 import MobileNavigation from "./components/navigation/MobileNavigation";
 
@@ -31,7 +31,7 @@ function App() {
       <MobileNavigation/>
       <main>
         {/* ============ PAGE: HOME ============ */}
-        <Home/>
+        <Hero/>
         {/* ============ PAGE: CATALOGUE ============ */}
         <Catalogue/>
         {/* ============ PAGE: ATELIER ============ */}

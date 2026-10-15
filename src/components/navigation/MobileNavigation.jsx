@@ -10,12 +10,12 @@ export default function MobileNavigation() {
         <li>
           <div className="m-drop-head">
             <a className="m-link" href="#catalogue" data-route="catalogue">
-              Catalogue
+              Catalog
             </a>
             <button
               className="m-sub-toggle"
               aria-expanded="false"
-              aria-label="Toggle catalogue submenu"
+              aria-label="Toggle catalog submenu"
             >
               <span className="caret" />
             </button>
@@ -27,7 +27,7 @@ export default function MobileNavigation() {
                 data-route="catalogue"
                 data-anchor="cat-lounge"
               >
-                Minimalist Lounge
+                Furniture
               </a>
             </li>
             <li>
@@ -36,7 +36,7 @@ export default function MobileNavigation() {
                 data-route="catalogue"
                 data-anchor="cat-tables"
               >
-                Monolith Tables
+                Free to take
               </a>
             </li>
             <li>
@@ -45,7 +45,7 @@ export default function MobileNavigation() {
                 data-route="catalogue"
                 data-anchor="cat-lighting"
               >
-                Architectural Lighting
+                Electronics
               </a>
             </li>
             <li>
@@ -54,7 +54,7 @@ export default function MobileNavigation() {
                 data-route="catalogue"
                 data-anchor="cat-textiles"
               >
-                Bespoke Textiles
+                Textiles &amp; clothes
               </a>
             </li>
           </ul>
@@ -62,12 +62,12 @@ export default function MobileNavigation() {
         <li>
           <div className="m-drop-head">
             <a className="m-link" href="#atelier" data-route="atelier">
-              Atelier
+              Repair Tips
             </a>
             <button
               className="m-sub-toggle"
               aria-expanded="false"
-              aria-label="Toggle atelier submenu"
+              aria-label="Toggle repair tips submenu"
             >
               <span className="caret" />
             </button>
@@ -79,7 +79,7 @@ export default function MobileNavigation() {
                 data-route="atelier"
                 data-anchor="at-philosophy"
               >
-                Design Philosophy
+                Before you throw it away
               </a>
             </li>
             <li>
@@ -88,7 +88,7 @@ export default function MobileNavigation() {
                 data-route="atelier"
                 data-anchor="at-provenance"
               >
-                Material Provenance
+                Basic tool kit
               </a>
             </li>
             <li>
@@ -97,19 +97,19 @@ export default function MobileNavigation() {
                 data-route="atelier"
                 data-anchor="at-woodcraft"
               >
-                Sustainable Woodcraft
+                Common fixes
               </a>
             </li>
             <li>
               <a href="#atelier" data-route="atelier" data-anchor="at-press">
-                Press &amp; Awards
+                Community
               </a>
             </li>
           </ul>
         </li>
         <li>
           <a className="m-link" href="#inquire" data-route="inquire">
-            Inquire
+            Share an item
           </a>
         </li>
       </ul>

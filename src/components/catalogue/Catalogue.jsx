@@ -3,253 +3,253 @@ export default function Catalogue() {
     <section className="page" id="page-catalogue">
           <div className="page-hero">
             <div className="container reveal">
-              <span className="eyebrow">Catalogue</span>
+              <span className="eyebrow">Catalog</span>
               <h1 className="editorial-title page-hero-title">
-                Forty pieces,{" "}
+                Things worth{" "}
                 <span
                   className="editorial-italic"
                   style={{ color: "var(--accent-violet)" }}
                 >
-                  one language
+                  saving
                 </span>
               </h1>
               <p className="lede" style={{ marginTop: 24 }}>
-                Each collection is small by design. Pieces marked bespoke can be
-                commissioned in alternate timbers, stones and weaves.
+                Browse items that need repair or are free to take. Pick a
+                category and see where you can help.
               </p>
             </div>
           </div>
-          {/* Minimalist Lounge */}
+          {/* Furniture */}
           <div className="catalogue-section" id="cat-lounge">
             <div className="container">
               <div className="cat-head reveal">
-                <h2 className="editorial-title">Minimalist Lounge</h2>
-                <span className="cat-count">09 pieces</span>
+                <h2 className="editorial-title">Furniture</h2>
+                <span className="cat-count">3 items</span>
               </div>
               <div className="product-grid">
                 <article className="product-card reveal">
                   <div className="frame">
                     <img
                       src="/images/lumen-l1.jpg"
-                      alt="Fjord lounge chair"
+                      alt="A chair with a loose leg"
                       loading="lazy"
                     />
                   </div>
                   <div className="product-info">
                     <div>
-                      <h3 className="product-name">Fjord Chair</h3>
-                      <p className="product-cat">Ash / Wool</p>
+                      <h3 className="product-name">Chair with a loose leg</h3>
+                      <p className="product-cat">Sofia</p>
                     </div>
-                    <span className="product-price">€2,450</span>
+                    <span className="product-price">Needs help</span>
                   </div>
                 </article>
                 <article className="product-card reveal">
                   <div className="frame">
                     <img
                       src="/images/lumen-l2.jpg"
-                      alt="Skagen low sofa"
+                      alt="A sofa with torn fabric"
                       loading="lazy"
                     />
                   </div>
                   <div className="product-info">
                     <div>
-                      <h3 className="product-name">Skagen Sofa</h3>
-                      <p className="product-cat">Oak / Bouclé</p>
+                      <h3 className="product-name">Sofa with torn fabric</h3>
+                      <p className="product-cat">Burgas</p>
                     </div>
-                    <span className="product-price">€5,200</span>
+                    <span className="product-price">Needs help</span>
                   </div>
                 </article>
                 <article className="product-card reveal">
                   <div className="frame">
                     <img
                       src="/images/lumen-l3.jpg"
-                      alt="Vidde daybed"
+                      alt="A daybed with a broken slat"
                       loading="lazy"
                     />
                   </div>
                   <div className="product-info">
                     <div>
-                      <h3 className="product-name">Vidde Daybed</h3>
-                      <p className="product-cat">Oak / Linen</p>
+                      <h3 className="product-name">Daybed with a broken slat</h3>
+                      <p className="product-cat">Ruse</p>
                     </div>
-                    <span className="product-price">€3,850</span>
+                    <span className="product-price">Fixed</span>
                   </div>
                 </article>
               </div>
             </div>
           </div>
-          {/* Monolith Tables on diagonal slate */}
+          {/* Free to take */}
           <div className="band band-slice" id="cat-tables">
             <div className="container">
               <div className="cat-head reveal">
-                <h2 className="editorial-title">Monolith Tables</h2>
-                <span className="cat-count">07 pieces</span>
+                <h2 className="editorial-title">Free to take</h2>
+                <span className="cat-count">3 items</span>
               </div>
               <div className="product-grid">
                 <article className="product-card reveal">
                   <div className="frame">
                     <img
                       src="/images/lumen-t1.jpg"
-                      alt="Basalt dining table"
+                      alt="An old dining table"
                       loading="lazy"
                     />
                   </div>
                   <div className="product-info">
                     <div>
-                      <h3 className="product-name">Basalt Table</h3>
-                      <p className="product-cat">Honed Stone</p>
+                      <h3 className="product-name">Old dining table</h3>
+                      <p className="product-cat">Plovdiv</p>
                     </div>
-                    <span className="product-price">€6,900</span>
+                    <span className="product-price">Free to take</span>
                   </div>
                 </article>
                 <article className="product-card reveal">
                   <div className="frame">
                     <img
                       src="/images/lumen-t2.jpg"
-                      alt="Plinth side table"
+                      alt="A small side table"
                       loading="lazy"
                     />
                   </div>
                   <div className="product-info">
                     <div>
-                      <h3 className="product-name">Plinth Side</h3>
-                      <p className="product-cat">Travertine</p>
+                      <h3 className="product-name">Small side table</h3>
+                      <p className="product-cat">Sofia</p>
                     </div>
-                    <span className="product-price">€1,650</span>
+                    <span className="product-price">Free to take</span>
                   </div>
                 </article>
                 <article className="product-card reveal">
                   <div className="frame">
                     <img
                       src="/images/lumen-t3.jpg"
-                      alt="Strata console table"
+                      alt="A console table with a stuck drawer"
                       loading="lazy"
                     />
                   </div>
                   <div className="product-info">
                     <div>
-                      <h3 className="product-name">Strata Console</h3>
-                      <p className="product-cat">Oak / Stone</p>
+                      <h3 className="product-name">Console with a stuck drawer</h3>
+                      <p className="product-cat">Varna</p>
                     </div>
-                    <span className="product-price">€4,300</span>
+                    <span className="product-price">Given away</span>
                   </div>
                 </article>
               </div>
             </div>
           </div>
-          {/* Architectural Lighting */}
+          {/* Electronics */}
           <div className="catalogue-section" id="cat-lighting">
             <div className="container">
               <div className="cat-head reveal">
-                <h2 className="editorial-title">Architectural Lighting</h2>
-                <span className="cat-count">12 pieces</span>
+                <h2 className="editorial-title">Electronics</h2>
+                <span className="cat-count">3 items</span>
               </div>
               <div className="product-grid">
                 <article className="product-card reveal">
                   <div className="frame">
                     <img
                       src="/images/lumen-g1.jpg"
-                      alt="Meridian floor lamp"
+                      alt="A floor lamp that does not turn on"
                       loading="lazy"
                     />
                   </div>
                   <div className="product-info">
                     <div>
-                      <h3 className="product-name">Meridian Lamp</h3>
-                      <p className="product-cat">Brass / Opal Glass</p>
+                      <h3 className="product-name">Lamp that won't turn on</h3>
+                      <p className="product-cat">Varna</p>
                     </div>
-                    <span className="product-price">€1,780</span>
+                    <span className="product-price">Needs help</span>
                   </div>
                 </article>
                 <article className="product-card reveal">
                   <div className="frame">
                     <img
                       src="/images/lumen-g2.jpg"
-                      alt="Halo pendant light"
+                      alt="A pendant light that flickers"
                       loading="lazy"
                     />
                   </div>
                   <div className="product-info">
                     <div>
-                      <h3 className="product-name">Halo Pendant</h3>
-                      <p className="product-cat">Patinated Brass</p>
+                      <h3 className="product-name">Flickering pendant light</h3>
+                      <p className="product-cat">Sofia</p>
                     </div>
-                    <span className="product-price">€980</span>
+                    <span className="product-price">Fixed</span>
                   </div>
                 </article>
                 <article className="product-card reveal">
                   <div className="frame">
                     <img
                       src="/images/lumen-g3.jpg"
-                      alt="Skygge wall sconce"
+                      alt="A wall lamp with a broken switch"
                       loading="lazy"
                     />
                   </div>
                   <div className="product-info">
                     <div>
-                      <h3 className="product-name">Skygge Sconce</h3>
-                      <p className="product-cat">Oak / Linen Shade</p>
+                      <h3 className="product-name">Wall lamp with a broken switch</h3>
+                      <p className="product-cat">Pleven</p>
                     </div>
-                    <span className="product-price">€640</span>
+                    <span className="product-price">Needs help</span>
                   </div>
                 </article>
               </div>
             </div>
           </div>
-          {/* Bespoke Textiles on diagonal slate */}
+          {/* Textiles and clothes */}
           <div className="band band-slice band-crimson" id="cat-textiles">
             <div className="container">
               <div className="cat-head reveal">
-                <h2 className="editorial-title">Bespoke Textiles</h2>
-                <span className="cat-count">Made to order</span>
+                <h2 className="editorial-title">Textiles &amp; clothes</h2>
+                <span className="cat-count">3 items</span>
               </div>
               <div className="product-grid">
                 <article className="product-card reveal">
                   <div className="frame">
                     <img
                       src="/images/lumen-x1.jpg"
-                      alt="Gotland woven throw"
+                      alt="A woollen blanket with a hole"
                       loading="lazy"
                     />
                   </div>
                   <div className="product-info">
                     <div>
-                      <h3 className="product-name">Gotland Throw</h3>
-                      <p className="product-cat">Undyed Wool</p>
+                      <h3 className="product-name">Blanket with a hole</h3>
+                      <p className="product-cat">Stara Zagora</p>
                     </div>
-                    <span className="product-price">€420</span>
+                    <span className="product-price">Needs help</span>
                   </div>
                 </article>
                 <article className="product-card reveal">
                   <div className="frame">
                     <img
                       src="/images/lumen-x2.jpg"
-                      alt="Dune flatweave rug"
+                      alt="A rug with frayed edges"
                       loading="lazy"
                     />
                   </div>
                   <div className="product-info">
                     <div>
-                      <h3 className="product-name">Dune Rug</h3>
-                      <p className="product-cat">Wool / Flax</p>
+                      <h3 className="product-name">Rug with frayed edges</h3>
+                      <p className="product-cat">Sofia</p>
                     </div>
-                    <span className="product-price">from €2,100</span>
+                    <span className="product-price">Free to take</span>
                   </div>
                 </article>
                 <article className="product-card reveal">
                   <div className="frame">
                     <img
                       src="/images/lumen-x3.jpg"
-                      alt="Tidal linen curtain panels"
+                      alt="Linen curtains with broken hooks"
                       loading="lazy"
                     />
                   </div>
                   <div className="product-info">
                     <div>
-                      <h3 className="product-name">Tidal Panels</h3>
-                      <p className="product-cat">Washed Linen</p>
+                      <h3 className="product-name">Curtains with broken hooks</h3>
+                      <p className="product-cat">Plovdiv</p>
                     </div>
-                    <span className="product-price">from €760</span>
+                    <span className="product-price">Fixed</span>
                   </div>
                 </article>
               </div>

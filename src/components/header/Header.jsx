@@ -3,7 +3,7 @@ export default function Header() {
     <header className="site-header">
       <div className="container header-inner">
         <a href="#home" className="brand" data-route="home">
-          Don`t throw <span>//</span> repair or share
+          Don't throw <span>//</span> repair or share
         </a>
         <nav className="main-nav" aria-label="Primary">
           <ul className="nav-list">
@@ -19,26 +19,17 @@ export default function Header() {
                 data-route="catalogue"
                 aria-haspopup="true"
               >
-                Branches <span className="caret" />
+                Catalog <span className="caret" />
               </a>
               <ul className="dropdown">
-                <li className="drop-label">Collections</li>
+                <li className="drop-label">Categories</li>
                 <li>
                   <a
                     href="#catalogue"
                     data-route="catalogue"
                     data-anchor="cat-lounge"
                   >
-                    Minimalist Lounge
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="#catalogue"
-                    data-route="catalogue"
-                    data-anchor="cat-tables"
-                  >
-                    Monolith Tables
+                    Furniture
                   </a>
                 </li>
                 <li>
@@ -47,7 +38,7 @@ export default function Header() {
                     data-route="catalogue"
                     data-anchor="cat-lighting"
                   >
-                    Architectural Lighting
+                    Electronics
                   </a>
                 </li>
                 <li>
@@ -56,7 +47,16 @@ export default function Header() {
                     data-route="catalogue"
                     data-anchor="cat-textiles"
                   >
-                    Bespoke Textiles
+                    Textiles &amp; clothes
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#catalogue"
+                    data-route="catalogue"
+                    data-anchor="cat-tables"
+                  >
+                    Free to take
                   </a>
                 </li>
               </ul>
@@ -68,17 +68,17 @@ export default function Header() {
                 data-route="atelier"
                 aria-haspopup="true"
               >
-                Atelier <span className="caret" />
+                Repair Tips <span className="caret" />
               </a>
               <ul className="dropdown">
-                <li className="drop-label">The Studio</li>
+                <li className="drop-label">Guides</li>
                 <li>
                   <a
                     href="#atelier"
                     data-route="atelier"
                     data-anchor="at-philosophy"
                   >
-                    Design Philosophy
+                    Before you throw it away
                   </a>
                 </li>
                 <li>
@@ -87,7 +87,7 @@ export default function Header() {
                     data-route="atelier"
                     data-anchor="at-provenance"
                   >
-                    Material Provenance
+                    Basic tool kit
                   </a>
                 </li>
                 <li>
@@ -96,7 +96,7 @@ export default function Header() {
                     data-route="atelier"
                     data-anchor="at-woodcraft"
                   >
-                    Sustainable Woodcraft
+                    Common fixes
                   </a>
                 </li>
                 <li>
@@ -105,19 +105,24 @@ export default function Header() {
                     data-route="atelier"
                     data-anchor="at-press"
                   >
-                    Press &amp; Awards
+                    Community
                   </a>
                 </li>
               </ul>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#inquire" data-route="inquire">
-                Inquire
+                Login
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#inquire" data-route="inquire">
+                Register
               </a>
             </li>
           </ul>
           <a href="#inquire" className="nav-cta" data-route="inquire">
-            Book Consultation
+            + Share an item
           </a>
         </nav>
         <button

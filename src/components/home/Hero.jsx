@@ -1,20 +1,19 @@
-export default function Home() {
+export default function Hero() {
   return (
        <section className="page" id="page-home">
           <div className="hero">
             <div className="container hero-grid">
               <div className="reveal">
-                <span className="eyebrow">Copenhagen / Est. 1980</span>
+                <span className="eyebrow">Repair · Reuse · Share</span>
                 <h1
                   className="editorial-title hero-title"
                   style={{ marginTop: 22 }}
                 >
-                  Don`t throw,
-                  <br />
-                  just <em>repair</em> or <em>share</em>.
+                  Every repaired thing is one less thing in the landfill,
+                  <br /> <em>and one more story worth telling.</em>
                 </h1>
                 <p className="lede hero-copy">
-                 Many people throw away things that could be fixed with a little help. In Dont-throw-repair users publish their broken or old items with a photo and a description, and other users give advice on how to repair them. If the owner does not want to repair an item, they can give it away to someone who will fix it. This way fewer things end up in the trash and people help each other.
+                 Got something broken? Post a photo and the community will tell you how to fix it. Don't want to fix it yourself? Give it to someone who will.
                 </p>
                 <div className="hero-actions">
                   <a
@@ -22,28 +21,28 @@ export default function Home() {
                     className="btn btn-solid"
                     data-route="catalogue"
                   >
-                    View Catalogue
+                    Browse items
                   </a>
                   <a href="#atelier" className="btn" data-route="atelier">
-                    The Atelier
+                    Share an item
                   </a>
                 </div>
               </div>
               <div className="hero-visual reveal">
                 <span className="hero-meta">
-                  Series N°14 · Oak / Wool / Brass
+                  Fixed this week: lamp, chair, bike
                 </span>
                 <div className="frame hero-img-main">
                   <img
                     src="/images/lumen-hero.jpg"
-                    alt="A minimalist oak lounge chair in a bright white studio"
+                    alt="An old wooden chair ready for repair"
                     loading="eager"
                   />
                 </div>
                 <div className="frame hero-img-detail">
                   <img
                     src="/images/lumen-detail.jpg"
-                    alt="Close detail of joinery in pale oak"
+                    alt="Close detail of a wooden joint"
                     loading="lazy"
                   />
                 </div>
@@ -55,15 +54,15 @@ export default function Home() {
             <div className="container reveal">
               <span className="quote-mark">“</span>
               <p className="editorial-title big-quote">
-                A room should hold its silence the way a shelf holds weight:{" "}
+                Don't throw it away.{" "}
                 <span
                   className="editorial-italic"
                   style={{ color: "var(--accent-violet)" }}
                 >
-                  without announcing the effort.
+                  Repair it, or share it.
                 </span>
               </p>
-              <p className="quote-attr">Astrid Lindqvist · Founding Director</p>
+              <p className="quote-attr">The Dont-throw-repair community</p>
             </div>
           </div>
           {/* Featured catalogue over diagonal slate */}
@@ -71,9 +70,9 @@ export default function Home() {
             <div className="container">
               <div className="section-head reveal">
                 <div>
-                  <span className="eyebrow">Featured Works</span>
+                  <span className="eyebrow">Latest items</span>
                   <h2 className="editorial-title section-title">
-                    The current edit
+                    Waiting for your advice
                   </h2>
                 </div>
                 <a
@@ -81,7 +80,7 @@ export default function Home() {
                   className="text-link"
                   data-route="catalogue"
                 >
-                  Full catalogue
+                  See all items
                 </a>
               </div>
               <div className="product-grid">
@@ -95,16 +94,16 @@ export default function Home() {
                     <div className="frame">
                       <img
                         src="/images/lumen-p1.jpg"
-                        alt="Fjord lounge chair in pale ash and undyed wool"
+                        alt="A wooden chair with a loose leg"
                         loading="lazy"
                       />
                     </div>
                     <div className="product-info">
                       <div>
-                        <h3 className="product-name">Fjord Chair</h3>
-                        <p className="product-cat">Minimalist Lounge</p>
+                        <h3 className="product-name">Wobbly chair</h3>
+                        <p className="product-cat">Furniture · Sofia</p>
                       </div>
-                      <span className="product-price">€2,450</span>
+                      <span className="product-price">Needs help</span>
                     </div>
                   </a>
                 </article>
@@ -118,16 +117,16 @@ export default function Home() {
                     <div className="frame">
                       <img
                         src="/images/lumen-p2.jpg"
-                        alt="Basalt monolith dining table with a single stone base"
+                        alt="An old table with a scratched top"
                         loading="lazy"
                       />
                     </div>
                     <div className="product-info">
                       <div>
-                        <h3 className="product-name">Basalt Table</h3>
-                        <p className="product-cat">Monolith Tables</p>
+                        <h3 className="product-name">Scratched table</h3>
+                        <p className="product-cat">Furniture · Plovdiv</p>
                       </div>
-                      <span className="product-price">€6,900</span>
+                      <span className="product-price">Free to take</span>
                     </div>
                   </a>
                 </article>
@@ -141,16 +140,16 @@ export default function Home() {
                     <div className="frame">
                       <img
                         src="/images/lumen-p3.jpg"
-                        alt="Meridian floor lamp casting a soft vertical light"
+                        alt="A floor lamp that does not turn on"
                         loading="lazy"
                       />
                     </div>
                     <div className="product-info">
                       <div>
-                        <h3 className="product-name">Meridian Lamp</h3>
-                        <p className="product-cat">Architectural Lighting</p>
+                        <h3 className="product-name">Lamp that won't turn on</h3>
+                        <p className="product-cat">Electronics · Varna</p>
                       </div>
-                      <span className="product-price">€1,780</span>
+                      <span className="product-price">Fixed</span>
                     </div>
                   </a>
                 </article>
@@ -162,43 +161,39 @@ export default function Home() {
             <div className="container">
               <div className="section-head reveal">
                 <div>
-                  <span className="eyebrow">Material Honesty</span>
+                  <span className="eyebrow">How it works</span>
                   <h2 className="editorial-title section-title">
-                    Four materials, no substitutes
+                    Four steps, no trash
                   </h2>
                 </div>
               </div>
               <div className="materials-grid reveal">
                 <div className="material-cell">
                   <span className="material-num">i.</span>
-                  <h3>Nordic Oak</h3>
+                  <h3>Post it</h3>
                   <p>
-                    Slow-grown, quarter-sawn, air-dried for three winters before
-                    a single cut is made.
+                    Take a photo of the broken thing and describe what is wrong.
                   </p>
                 </div>
                 <div className="material-cell">
                   <span className="material-num">ii.</span>
-                  <h3>Undyed Wool</h3>
+                  <h3>Get advice</h3>
                   <p>
-                    Sourced from two Gotland flocks. The colour is the sheep's,
-                    not a factory's.
+                    Other users suggest how to fix it or offer to help.
                   </p>
                 </div>
                 <div className="material-cell">
                   <span className="material-num">iii.</span>
-                  <h3>Honed Basalt</h3>
+                  <h3>Fix it</h3>
                   <p>
-                    Volcanic stone finished to a matte touch that reads as warm
-                    rather than cold.
+                    Try the advice and mark the one that worked.
                   </p>
                 </div>
                 <div className="material-cell">
                   <span className="material-num">iv.</span>
-                  <h3>Patinated Brass</h3>
+                  <h3>Or give it away</h3>
                   <p>
-                    Left unlacquered on purpose. Every fingerprint becomes part
-                    of the record.
+                    Can't fix it? Someone else will be happy to.
                   </p>
                 </div>
               </div>
@@ -210,23 +205,23 @@ export default function Home() {
               <div className="frame reveal">
                 <img
                   src="/images/lumen-atelier.jpg"
-                  alt="The LUMEN // 80 workshop with benches and hand tools"
+                  alt="A workbench with hand tools"
                   loading="lazy"
                 />
               </div>
               <div className="split-content reveal">
-                <span className="eyebrow">Inside the Atelier</span>
+                <span className="eyebrow">Free to take</span>
                 <h2 className="editorial-title">
-                  Built by eleven hands, signed by one
+                  One person's junk is another person's project
                 </h2>
                 <p className="lede">
-                  Our Copenhagen workshop keeps a deliberate ceiling of forty
-                  commissions per year. Every piece carries the mark of the lead
-                  maker who saw it from rough plank to final oiling.
+                  Some owners don't have the time or tools to repair their
+                  things. Instead of throwing them away, they give them to
+                  someone who does.
                 </p>
                 <p className="lede" style={{ marginTop: 16 }}>
-                  Visits are by appointment, and we encourage them. Furniture
-                  should be met in person before it is chosen.
+                  Check the free items. Maybe your next project is waiting
+                  there.
                 </p>
                 <a
                   href="#atelier"
@@ -234,7 +229,7 @@ export default function Home() {
                   style={{ marginTop: 34 }}
                   data-route="atelier"
                 >
-                  Read our philosophy
+                  See free items
                 </a>
               </div>
             </div>

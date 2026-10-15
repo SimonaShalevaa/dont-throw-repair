@@ -5,15 +5,15 @@ export default function Footer() {
           <div className="footer-grid">
             <div className="footer-brand">
               <a href="#home" className="brand" data-route="home">
-                LUMEN <span>//</span> 80
+                Don't throw <span>//</span> repair or share
               </a>
               <p>
-                A Scandinavian atelier for furniture and spatial design.
-                Copenhagen, since 1980.
+                Repair, reuse, share. Keep things out of the landfill and help
+                each other.
               </p>
             </div>
             <div className="footer-col">
-              <h4>Catalogue</h4>
+              <h4>Catalog</h4>
               <ul>
                 <li>
                   <a
@@ -21,7 +21,7 @@ export default function Footer() {
                     data-route="catalogue"
                     data-anchor="cat-lounge"
                   >
-                    Minimalist Lounge
+                    Furniture
                   </a>
                 </li>
                 <li>
@@ -30,7 +30,7 @@ export default function Footer() {
                     data-route="catalogue"
                     data-anchor="cat-tables"
                   >
-                    Monolith Tables
+                    Free to take
                   </a>
                 </li>
                 <li>
@@ -39,7 +39,7 @@ export default function Footer() {
                     data-route="catalogue"
                     data-anchor="cat-lighting"
                   >
-                    Architectural Lighting
+                    Electronics
                   </a>
                 </li>
                 <li>
@@ -48,13 +48,13 @@ export default function Footer() {
                     data-route="catalogue"
                     data-anchor="cat-textiles"
                   >
-                    Bespoke Textiles
+                    Textiles &amp; clothes
                   </a>
                 </li>
               </ul>
             </div>
             <div className="footer-col">
-              <h4>Atelier</h4>
+              <h4>Repair Tips</h4>
               <ul>
                 <li>
                   <a
@@ -62,7 +62,7 @@ export default function Footer() {
                     data-route="atelier"
                     data-anchor="at-philosophy"
                   >
-                    Design Philosophy
+                    Before you throw it away
                   </a>
                 </li>
                 <li>
@@ -71,7 +71,7 @@ export default function Footer() {
                     data-route="atelier"
                     data-anchor="at-provenance"
                   >
-                    Material Provenance
+                    Basic tool kit
                   </a>
                 </li>
                 <li>
@@ -80,7 +80,7 @@ export default function Footer() {
                     data-route="atelier"
                     data-anchor="at-woodcraft"
                   >
-                    Sustainable Woodcraft
+                    Common fixes
                   </a>
                 </li>
                 <li>
@@ -89,27 +89,27 @@ export default function Footer() {
                     data-route="atelier"
                     data-anchor="at-press"
                   >
-                    Press &amp; Awards
+                    Community
                   </a>
                 </li>
               </ul>
             </div>
             <div className="footer-col">
-              <h4>Studio</h4>
+              <h4>Account</h4>
               <ul>
                 <li>
                   <a href="#inquire" data-route="inquire">
-                    Inquire
+                    Login
                   </a>
                 </li>
                 <li>
                   <a href="#inquire" data-route="inquire">
-                    Book consultation
+                    Register
                   </a>
                 </li>
                 <li>
                   <a href="#inquire" data-route="inquire">
-                    Trade programme
+                    Share an item
                   </a>
                 </li>
               </ul>
@@ -117,7 +117,7 @@ export default function Footer() {
           </div>
           <div className="footer-base">
             <span>
-              © <span id="year" /> LUMEN // 80. All rights reserved.
+              © 2026 Dont-throw-repair. React course project.
             </span>
             <span>
               Design:{" "}

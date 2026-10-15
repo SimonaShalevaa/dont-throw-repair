@@ -3,114 +3,112 @@ export default function Atelier() {
     <section className="page" id="page-atelier">
           <div className="page-hero">
             <div className="container reveal">
-              <span className="eyebrow">The Atelier</span>
+              <span className="eyebrow">Repair Tips</span>
               <h1 className="editorial-title page-hero-title">
-                Where restraint is{" "}
+                Fix it before{" "}
                 <span
                   className="editorial-italic"
                   style={{ color: "var(--accent-violet)" }}
                 >
-                  a craft
+                  you throw it
                 </span>
               </h1>
               <p className="lede" style={{ marginTop: 24 }}>
-                Founded in Copenhagen in 1980. Eleven makers, one workshop,
-                forty commissions a year. Nothing leaves the bench unsigned.
+                Simple checks and fixes that save most broken things. No
+                special skills needed, just a little patience.
               </p>
             </div>
           </div>
-          {/* Design Philosophy */}
+          {/* Before you throw it away */}
           <div className="atelier-block" id="at-philosophy">
             <div className="container split">
               <div className="split-content reveal">
-                <span className="eyebrow">Design Philosophy</span>
-                <h2 className="editorial-title">Subtract until it holds</h2>
+                <span className="eyebrow">Before you throw it away</span>
+                <h2 className="editorial-title">Check the simple things first</h2>
                 <p className="lede">
-                  Every LUMEN // 80 piece begins as an over-drawn sketch. The
-                  work of the studio is removal: taking away line after line
-                  until only the structure that carries weight, light and use
-                  remains.
+                  Many things stop working because of something small: a dead
+                  battery, a blown fuse, a loose screw or a dirty contact. Check
+                  these before you decide it is broken for good.
                 </p>
                 <p className="lede" style={{ marginTop: 16 }}>
-                  We do not follow seasons. A chair drawn in 1984 still sits in
-                  the current catalogue because nothing about sitting has
-                  changed.
+                  Look for the model number and search for it. Very often
+                  someone has already had the same problem and explained how to
+                  fix it.
                 </p>
               </div>
               <div className="frame reveal">
                 <img
                   src="/images/lumen-ph.jpg"
-                  alt="Pencil drawings of chair profiles pinned to a white wall"
+                  alt="Notes and sketches of a repair pinned to a wall"
                   loading="lazy"
                 />
               </div>
             </div>
           </div>
-          {/* Material Provenance on diagonal slate */}
+          {/* Basic tool kit */}
           <div className="band band-slice" id="at-provenance">
             <div className="container">
               <div className="section-head reveal">
                 <div>
-                  <span className="eyebrow">Material Provenance</span>
+                  <span className="eyebrow">Basic tool kit</span>
                   <h2 className="editorial-title section-title">
-                    Every plank has an address
+                    Four tools, most repairs
                   </h2>
                 </div>
               </div>
               <ul className="provenance-list reveal">
                 <li>
-                  <strong>Oak &amp; Ash</strong>
+                  <strong>Screwdrivers</strong>
                   <span>
-                    Certified forests in Jämtland, Sweden. Felled in winter,
-                    milled within 40 km, air-dried on site for three years.
+                    A flat and a cross-head screwdriver open most devices and
+                    tighten most furniture.
                   </span>
                 </li>
                 <li>
-                  <strong>Wool</strong>
+                  <strong>Pliers &amp; tape</strong>
                   <span>
-                    Two family-run Gotland flocks. Sheared, sorted and spun on
-                    the island; never bleached, never dyed.
+                    For holding, bending and quick fixes until the real repair
+                    is done.
                   </span>
                 </li>
                 <li>
-                  <strong>Basalt &amp; Travertine</strong>
+                  <strong>Glue &amp; clamps</strong>
                   <span>
-                    Quarried in the Eifel region and Tivoli. Offcuts return to
-                    the quarry for aggregate, not landfill.
+                    Wood glue for furniture, super glue for small plastic parts.
+                    Clamps hold everything while it dries.
                   </span>
                 </li>
                 <li>
-                  <strong>Brass</strong>
+                  <strong>Needle &amp; thread</strong>
                   <span>
-                    Minimum 85% recycled content, cast in a fourth-generation
-                    Copenhagen foundry twelve minutes from our bench.
+                    Buttons, seams and small holes in clothes, curtains and
+                    blankets.
                   </span>
                 </li>
               </ul>
             </div>
           </div>
-          {/* Sustainable Woodcraft */}
+          {/* Common fixes */}
           <div className="atelier-block" id="at-woodcraft">
             <div className="container split">
               <div className="frame reveal">
                 <img
                   src="/images/lumen-wood.jpg"
-                  alt="A maker hand-planing a pale oak board"
+                  alt="Hands repairing a wooden board"
                   loading="lazy"
                 />
               </div>
               <div className="split-content reveal">
-                <span className="eyebrow">Sustainable Woodcraft</span>
-                <h2 className="editorial-title">Joinery instead of hardware</h2>
+                <span className="eyebrow">Common fixes</span>
+                <h2 className="editorial-title">Small repairs, big difference</h2>
                 <p className="lede">
-                  Our frames are cut with wedged tenons and dovetails, not
-                  screws and brackets. A piece that is joined can be re-joined;
-                  a piece that is glued and bolted usually cannot.
+                  A wobbly chair usually needs only a tightened screw or a
+                  little wood glue. A lamp that does not turn on often needs
+                  just a new bulb or switch.
                 </p>
                 <p className="lede" style={{ marginTop: 16 }}>
-                  Every commission includes a lifetime refinishing service. We
-                  would rather restore a thirty-year-old table than sell a new
-                  one to the same address.
+                  A flat bike tyre, a broken zip or a loose door handle are
+                  quick fixes too. Post a photo and someone will show you how.
                 </p>
                 <a
                   href="#inquire"
@@ -118,53 +116,49 @@ export default function Atelier() {
                   style={{ marginTop: 34 }}
                   data-route="inquire"
                 >
-                  Commission a piece
+                  Ask for advice
                 </a>
               </div>
             </div>
           </div>
-          {/* Press & Awards */}
+          {/* Community */}
           <div className="atelier-block" id="at-press">
             <div className="container">
               <div className="section-head reveal">
                 <div>
-                  <span className="eyebrow">Press &amp; Awards</span>
+                  <span className="eyebrow">Community</span>
                   <h2 className="editorial-title section-title">
-                    Quiet work, noted
+                    Small fixes add up
                   </h2>
                 </div>
               </div>
               <div className="awards-grid">
                 <div className="award-cell reveal">
-                  <span className="award-year">2025</span>
-                  <h3>Nordic Design Prize / Furniture</h3>
+                  <span className="award-year">120</span>
+                  <h3>Items posted</h3>
                   <p>
-                    Awarded for the Basalt Table series and its single-stone
-                    cantilever base.
+                    Broken and old things shared by the community.
                   </p>
                 </div>
                 <div className="award-cell reveal">
-                  <span className="award-year">2024</span>
-                  <h3>Wallpaper* Design Awards / Shortlist</h3>
+                  <span className="award-year">85</span>
+                  <h3>Items fixed</h3>
                   <p>
-                    Meridian Lamp shortlisted in the Best Domestic Lighting
-                    category.
+                    Repaired with advice from other users.
                   </p>
                 </div>
                 <div className="award-cell reveal">
-                  <span className="award-year">2022</span>
-                  <h3>Danish Craft Council / Gold Mark</h3>
+                  <span className="award-year">30</span>
+                  <h3>Items given away</h3>
                   <p>
-                    Studio-wide recognition for joinery standards and repairable
-                    construction.
+                    Found a new owner instead of the trash.
                   </p>
                 </div>
                 <div className="award-cell reveal">
-                  <span className="award-year">2019</span>
-                  <h3>Monocle / Top 25 Ateliers</h3>
+                  <span className="award-year">300</span>
+                  <h3>Pieces of advice</h3>
                   <p>
-                    Featured for the forty-commission ceiling and lifetime
-                    refinishing programme.
+                    Tips and ideas shared under the items.
                   </p>
                 </div>
               </div>
