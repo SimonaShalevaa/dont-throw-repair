@@ -1,8 +1,30 @@
 import { Link } from "react-router";
 
+import { useEffect, useState } from "react";
+import request from "../../utils/request";
 import ItemCard from "../common-components/ItemCard";
 
 export default function Hero() {
+  const [latestItems, setLatestItems] = useState([]);
+
+  useEffect(() => {
+    const abortController = new AbortController();
+
+    request("items?order=created_at.desc&limit=3", "GET", null, {
+      signal: abortController.signal,
+    })
+      .then(setLatestItems)
+      .catch((err) => {
+        if (err.name !== "AbortError") {
+          alert(err.message);
+        }
+      });
+
+    return () => {
+      abortController.abort();
+    };
+  }, []);
+
   return (
     <section className="page" id="page-home">
       <div className="hero">
@@ -82,31 +104,14 @@ export default function Hero() {
             </Link>
           </div>
           <div className="product-grid">
-            <ItemCard
-              image="/images/lumen-p1.jpg"
-              title="Wobbly chair"
-              category="Furniture"
-              city="Sofia"
-              status="Needs help"
-            />
-            <ItemCard
-              image="/images/lumen-p2.jpg"
-              title="Scratched table"
-              category="Furniture"
-              city="Plovdiv"
-              status="Free to take"
-            />
-            <ItemCard
-              image="/images/lumen-p3.jpg"
-              title="Lamp that won't turn on"
-              category="Electronics"
-              city="Varna"
-              status="Fixed"
-            />
+            {latestItems.length > 0 ? (
+              latestItems.map((item) => <ItemCard key={item.id} {...item} />)
+            ) : (
+              <p className="no-articles">No items yet</p>
+            )}
           </div>
         </div>
       </div>
-      {/* Materials strip */}
       <div className="section">
         <div className="container">
           <div className="section-head reveal">
