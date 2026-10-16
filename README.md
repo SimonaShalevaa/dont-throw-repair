@@ -1,5 +1,8 @@
 # React Project - Dont-throw-repair
 
+## Setup
+1. Copy `.env` as `.env.local` and add your Supabase publishable key.
+
 ## 1. Project Overview
 
 **Application Name:** Dont-throw-repair
