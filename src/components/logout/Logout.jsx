@@ -1,9 +1,13 @@
+import { useContext, useEffect } from "react";
+import { Navigate } from "react-router";
+import AuthContext from "../../contexts/auth-context";
+
 export default function Logout() {
-  return (
-    <section className="page-hero">
-      <div className="container">
-        <h1 className="editorial-title page-hero-title">Logout</h1>
-      </div>
-    </section>
-  );
+  const { logout } = useContext(AuthContext);
+
+  useEffect(() => {
+    logout();
+  }, [logout]);
+
+  return <Navigate to="/" />;
 }
