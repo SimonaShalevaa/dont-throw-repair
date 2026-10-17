@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { Link } from "react-router";
+import AuthContext from "../../contexts/auth-context";
 
 export default function Header() {
+  const { isAuthenticated } = useContext(AuthContext);
   return (
     <header className="site-header">
       <div className="container header-inner">
@@ -21,24 +24,16 @@ export default function Header() {
               <ul className="dropdown">
                 <li className="drop-label">Categories</li>
                 <li>
-                  <Link to="/catalog">
-                    Furniture
-                  </Link>
+                  <Link to="/catalog">Furniture</Link>
                 </li>
                 <li>
-                  <Link to="/catalog">
-                    Electronics
-                  </Link>
+                  <Link to="/catalog">Electronics</Link>
                 </li>
                 <li>
-                  <Link to="/catalog">
-                    Textiles &amp; clothes
-                  </Link>
+                  <Link to="/catalog">Textiles &amp; clothes</Link>
                 </li>
                 <li>
-                  <Link to="/catalog">
-                    Free to take
-                  </Link>
+                  <Link to="/catalog">Free to take</Link>
                 </li>
               </ul>
             </li>
@@ -49,46 +44,45 @@ export default function Header() {
               <ul className="dropdown">
                 <li className="drop-label">Guides</li>
                 <li>
-                  <Link to="/repair-tips">
-                    Before you throw it away
-                  </Link>
+                  <Link to="/repair-tips">Before you throw it away</Link>
                 </li>
                 <li>
-                  <Link to="/repair-tips">
-                    Basic tool kit
-                  </Link>
+                  <Link to="/repair-tips">Basic tool kit</Link>
                 </li>
                 <li>
-                  <Link to="/repair-tips">
-                    Common fixes
-                  </Link>
+                  <Link to="/repair-tips">Common fixes</Link>
                 </li>
                 <li>
-                  <Link to="/repair-tips">
-                    Community
-                  </Link>
+                  <Link to="/repair-tips">Community</Link>
                 </li>
               </ul>
             </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/login">
-                Login
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/register">
-                Register
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link" to="/logout">
-                Logout
-              </Link>
-            </li>
+            {isAuthenticated ? (
+              <li className="nav-item">
+                <Link className="nav-link" to="/logout">
+                  Logout
+                </Link>
+              </li>
+            ) : (
+              <>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/login">
+                    Login
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/register">
+                    Register
+                  </Link>
+                </li>
+              </>
+            )}
           </ul>
-          <Link to="/create" className="nav-cta">
-            + Share an item
-          </Link>
+          {isAuthenticated && (
+            <Link to="/create" className="nav-cta">
+              + Share an item
+            </Link>
+          )}
         </nav>
         <button
           className="menu-toggle"

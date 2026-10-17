@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import { Link } from "react-router";
+import AuthContext from "../../contexts/auth-context";
 
 export default function MobileNavigation() {
+  const { isAuthenticated } = useContext(AuthContext);
   return (
     <nav className="mobile-nav" id="mobileNav" aria-label="Mobile">
       <ul>
@@ -24,24 +27,16 @@ export default function MobileNavigation() {
           </div>
           <ul className="m-sub">
             <li>
-              <Link to="/catalog">
-                Furniture
-              </Link>
+              <Link to="/catalog">Furniture</Link>
             </li>
             <li>
-              <Link to="/catalog">
-                Free to take
-              </Link>
+              <Link to="/catalog">Free to take</Link>
             </li>
             <li>
-              <Link to="/catalog">
-                Electronics
-              </Link>
+              <Link to="/catalog">Electronics</Link>
             </li>
             <li>
-              <Link to="/catalog">
-                Textiles &amp; clothes
-              </Link>
+              <Link to="/catalog">Textiles &amp; clothes</Link>
             </li>
           </ul>
         </li>
@@ -60,47 +55,46 @@ export default function MobileNavigation() {
           </div>
           <ul className="m-sub">
             <li>
-              <Link to="/repair-tips">
-                Before you throw it away
-              </Link>
+              <Link to="/repair-tips">Before you throw it away</Link>
             </li>
             <li>
-              <Link to="/repair-tips">
-                Basic tool kit
-              </Link>
+              <Link to="/repair-tips">Basic tool kit</Link>
             </li>
             <li>
-              <Link to="/repair-tips">
-                Common fixes
-              </Link>
+              <Link to="/repair-tips">Common fixes</Link>
             </li>
             <li>
-              <Link to="/repair-tips">
-                Community
-              </Link>
+              <Link to="/repair-tips">Community</Link>
             </li>
           </ul>
         </li>
-        <li>
-          <Link className="m-link" to="/create">
-            Share an item
-          </Link>
-        </li>
-        <li>
-          <Link className="m-link" to="/login">
-            Login
-          </Link>
-        </li>
-        <li>
-          <Link className="m-link" to="/register">
-            Register
-          </Link>
-        </li>
-        <li>
-          <Link className="m-link" to="/logout">
-            Logout
-          </Link>
-        </li>
+        {isAuthenticated ? (
+          <>
+            <li>
+              <Link className="m-link" to="/create">
+                Share an item
+              </Link>
+            </li>
+            <li>
+              <Link className="m-link" to="/logout">
+                Logout
+              </Link>
+            </li>
+          </>
+        ) : (
+          <>
+            <li>
+              <Link className="m-link" to="/login">
+                Login
+              </Link>
+            </li>
+            <li>
+              <Link className="m-link" to="/register">
+                Register
+              </Link>
+            </li>
+          </>
+        )}
       </ul>
     </nav>
   );
