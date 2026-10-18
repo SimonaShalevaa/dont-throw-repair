@@ -52,7 +52,8 @@ export default function Details() {
           <h1 className="editorial-title">{item.title}</h1>
           <p className="lede">{item.description}</p>
           <p className="lede" style={{ marginTop: 16 }}>
-            Posted by {item.profiles?.username}
+            Posted by{" "}
+            <Link to={`/users/${item.ownerId}`}>{item.profiles?.username}</Link>
           </p>
         </div>
       </div>

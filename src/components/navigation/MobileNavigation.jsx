@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import AuthContext from "../../contexts/auth-context";
 
 export default function MobileNavigation() {
-  const { isAuthenticated } = useContext(AuthContext);
+  const { isAuthenticated, user } = useContext(AuthContext);
   return (
     <nav className="mobile-nav" id="mobileNav" aria-label="Mobile">
       <ul>
@@ -73,6 +73,11 @@ export default function MobileNavigation() {
             <li>
               <Link className="m-link" to="/create">
                 Share an item
+              </Link>
+            </li>
+            <li>
+              <Link className="m-link" to={`/users/${user?.id}`}>
+                My profile
               </Link>
             </li>
             <li>

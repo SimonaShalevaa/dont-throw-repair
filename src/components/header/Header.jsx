@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import AuthContext from "../../contexts/auth-context";
 
 export default function Header() {
-  const { isAuthenticated } = useContext(AuthContext);
+  const { isAuthenticated, user } = useContext(AuthContext);
   return (
     <header className="site-header">
       <div className="container header-inner">
@@ -58,11 +58,18 @@ export default function Header() {
               </ul>
             </li>
             {isAuthenticated ? (
-              <li className="nav-item">
-                <Link className="nav-link" to="/logout">
-                  Logout
-                </Link>
-              </li>
+              <>
+                <li className="nav-item">
+                  <Link className="nav-link" to={`/users/${user?.id}`}>
+                    My profile
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/logout">
+                    Logout
+                  </Link>
+                </li>
+              </>
             ) : (
               <>
                 <li className="nav-item">
