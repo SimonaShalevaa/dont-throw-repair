@@ -16,6 +16,8 @@ import NotFound from "./components/not-found/NotFound";
 import { useState } from "react";
 import { authApi } from "./api";
 import AuthContext from "./contexts/auth-context";
+import PrivateRoute from "./guards/PrivateRoute";
+import GuestRoute from "./guards/GuestRoute";
 
 function App() {
   const navigate = useNavigate();
@@ -105,15 +107,22 @@ function App() {
           <Route path="/" element={<Hero />} />
           <Route path="/catalog" element={<Catalogue />} />
           <Route path="/repair-tips" element={<Atelier />} />
-          <Route path="/create" element={<Inquire />} />
           <Route path="/items/:itemId" element={<Details />} />
-          <Route path="/items/:itemId/edit" element={<Edit />} />
           <Route path="/users/:userId" element={<Profile />} />
-          <Route path="/login" element={<Login onLogin={login} />} />
-          <Route
-            path="/register"
-            element={<Register onRegister={register} />}
-          />
+
+          <Route element={<PrivateRoute />}>
+            <Route path="/create" element={<Inquire />} />
+            <Route path="/items/:itemId/edit" element={<Edit />} />
+          </Route>
+
+          <Route element={<GuestRoute />}>
+            <Route path="/login" element={<Login onLogin={login} />} />
+            <Route
+              path="/register"
+              element={<Register onRegister={register} />}
+            />
+          </Route>
+
           <Route path="/logout" element={<Logout />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
