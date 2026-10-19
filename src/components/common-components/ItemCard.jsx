@@ -6,7 +6,18 @@ const statusLabels = {
   given: "Given away",
 };
 
-export default function ItemCard({ id, imageUrl, title, category, city, status }) {
+export default function ItemCard({
+  id,
+  imageUrl,
+  title,
+  category,
+  city,
+  status,
+  giveAway,
+}) {
+  const label =
+    giveAway && status === "needs_help" ? "Free to take" : statusLabels[status];
+
   return (
     <article className="product-card reveal">
       <Link to={`/items/${id}`} className="card-link">
@@ -16,9 +27,11 @@ export default function ItemCard({ id, imageUrl, title, category, city, status }
         <div className="product-info">
           <div>
             <h3 className="product-name">{title}</h3>
-            <p className="product-cat">{category} · {city}</p>
+            <p className="product-cat">
+              {category} · {city}
+            </p>
           </div>
-          <span className="product-price">{statusLabels[status]}</span>
+          <span className="product-price">{label}</span>
         </div>
       </Link>
     </article>
