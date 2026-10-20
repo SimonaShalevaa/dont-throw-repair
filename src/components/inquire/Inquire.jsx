@@ -9,13 +9,9 @@ export default function Inquire() {
   const navigate = useNavigate();
 
   const createHandler = async (values) => {
-    try {
-      const result = await itemsApi.create(values, accessToken);
+    const result = await itemsApi.create(values, accessToken);
 
-      navigate(`/items/${result[0].id}`);
-    } catch (err) {
-      alert(err.message);
-    }
+    navigate(`/items/${result[0].id}`);
   };
 
   return (

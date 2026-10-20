@@ -500,3 +500,14 @@ main { min-height: 70vh; }
   .hero-img-detail { left: 0; }
   .band-featured, .band-quote, .band-slice { padding: 100px 0 90px; }
 }
+
+.field-error {
+  color: #c0392b;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.form-error {
+  color: #c0392b;
+  margin-bottom: 16px;
+}

@@ -30,18 +30,13 @@ export default function Edit() {
       giveAway: values.giveAway,
     };
 
-    try {
-      const result = await itemsApi.update(itemId, data, accessToken);
+    const result = await itemsApi.update(itemId, data, accessToken);
 
-      if (result.length === 0) {
-        alert("Nothing was updated.");
-        return;
-      }
-
-      navigate(`/items/${itemId}`);
-    } catch (err) {
-      alert(err.message);
+    if (result.length === 0) {
+      throw new Error("Nothing was updated.");
     }
+
+    navigate(`/items/${itemId}`);
   };
 
   if (isLoading) {
