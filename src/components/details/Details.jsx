@@ -1,20 +1,44 @@
-import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router";
-import request from "../../utils/request";
+import { useContext, useEffect, useState } from "react";
+import { Link, useNavigate, useParams } from "react-router";
+import { itemsApi } from "../../api";
+import AuthContext from "../../contexts/auth-context";
 
 export default function Details() {
   const { itemId } = useParams();
   const [item, setItem] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const { user, accessToken } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsLoading(true);
 
-    request(`items?id=eq.${itemId}&select=*,profiles(username)`)
+    itemsApi.getOne(itemId)
       .then((result) => setItem(result[0] || null))
       .catch((err) => alert(err.message))
       .finally(() => setIsLoading(false));
   }, [itemId]);
+
+  const deleteHandler = async () => {
+    const confirmed = window.confirm(`Are you sure you want to delete "${item.title}"?`);
+
+    if (!confirmed) {
+      return;
+    }
+
+    try {
+      const result = await itemsApi.remove(item.id, accessToken);
+
+      if (result.length === 0) {
+        alert("The item was not deleted.");
+        return;
+      }
+
+      navigate("/catalog");
+    } catch (err) {
+      alert(err.message);
+    }
+  };
 
   if (isLoading) {
     return (
@@ -39,6 +63,8 @@ export default function Details() {
     );
   }
 
+  const isOwner = user?.id === item.ownerId;
+
   return (
     <section className="section">
       <div className="container split">
@@ -55,6 +81,16 @@ export default function Details() {
             Posted by{" "}
             <Link to={`/users/${item.ownerId}`}>{item.profiles?.username}</Link>
           </p>
+          {isOwner && (
+            <div style={{ display: "flex", gap: 16, marginTop: 34 }}>
+              <Link to={`/items/${item.id}/edit`} className="btn">
+                Edit
+              </Link>
+              <button type="button" className="btn btn-solid" onClick={deleteHandler}>
+                Delete
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </section>
