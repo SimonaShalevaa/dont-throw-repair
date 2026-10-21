@@ -1,6 +1,28 @@
 import { useState } from "react";
 import { Link } from "react-router";
 
+function validate(values) {
+  const errors = {};
+
+  if (values.username.length < 3 || values.username.length > 20) {
+    errors.username = "Username must be between 3 and 20 characters.";
+  }
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
+    errors.email = "Please enter a valid email.";
+  }
+
+  if (values.password.length < 6) {
+    errors.password = "Password must be at least 6 characters.";
+  }
+
+  if (values.password !== values.rePassword) {
+    errors.rePassword = "Passwords don't match.";
+  }
+
+  return errors;
+}
+
 export default function Register({ onRegister }) {
   const [values, setValues] = useState({
     username: "",
@@ -8,6 +30,8 @@ export default function Register({ onRegister }) {
     password: "",
     rePassword: "",
   });
+
+  const [errors, setErrors] = useState({});
 
   const changeHandler = (e) => {
     setValues((state) => ({
@@ -19,28 +43,10 @@ export default function Register({ onRegister }) {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    if (!values.username || !values.email || !values.password || !values.rePassword) {
-      alert("All fields are required!");
-      return;
-    }
+    const newErrors = validate(values);
+    setErrors(newErrors);
 
-    if (values.username.length < 3) {
-      alert("Username must be at least 3 characters!");
-      return;
-    }
-
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
-      alert("Please enter a valid email!");
-      return;
-    }
-
-    if (values.password.length < 6) {
-      alert("Password must be at least 6 characters!");
-      return;
-    }
-
-    if (values.password !== values.rePassword) {
-      alert("Passwords do not match!");
+    if (Object.keys(newErrors).length > 0) {
       return;
     }
 
@@ -56,25 +62,53 @@ export default function Register({ onRegister }) {
       <div className="container">
         <h1 className="editorial-title page-hero-title">Register</h1>
 
-        <form onSubmit={submitHandler} style={{ marginTop: 40, maxWidth: 480 }}>
+        <form onSubmit={submitHandler} noValidate style={{ marginTop: 40, maxWidth: 480 }}>
           <div className="field">
             <label htmlFor="username">Username</label>
-            <input type="text" id="username" name="username" value={values.username} onChange={changeHandler} />
+            <input
+              type="text"
+              id="username"
+              name="username"
+              value={values.username}
+              onChange={changeHandler}
+            />
+            {errors.username && <p className="field-error">{errors.username}</p>}
           </div>
 
           <div className="field">
             <label htmlFor="email">Email</label>
-            <input type="email" id="email" name="email" value={values.email} onChange={changeHandler} />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={values.email}
+              onChange={changeHandler}
+            />
+            {errors.email && <p className="field-error">{errors.email}</p>}
           </div>
 
           <div className="field">
             <label htmlFor="password">Password</label>
-            <input type="password" id="password" name="password" value={values.password} onChange={changeHandler} />
+            <input
+              type="password"
+              id="password"
+              name="password"
+              value={values.password}
+              onChange={changeHandler}
+            />
+            {errors.password && <p className="field-error">{errors.password}</p>}
           </div>
 
           <div className="field">
             <label htmlFor="rePassword">Repeat password</label>
-            <input type="password" id="rePassword" name="rePassword" value={values.rePassword} onChange={changeHandler} />
+            <input
+              type="password"
+              id="rePassword"
+              name="rePassword"
+              value={values.rePassword}
+              onChange={changeHandler}
+            />
+            {errors.rePassword && <p className="field-error">{errors.rePassword}</p>}
           </div>
 
           <button type="submit" className="btn btn-solid">
