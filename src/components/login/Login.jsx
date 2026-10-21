@@ -1,11 +1,27 @@
 import { useState } from "react";
 import { Link } from "react-router";
 
+function validate(values) {
+  const errors = {};
+
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
+    errors.email = "Please enter a valid email.";
+  }
+
+  if (!values.password) {
+    errors.password = "Password is required.";
+  }
+
+  return errors;
+}
+
 export default function Login({ onLogin }) {
   const [values, setValues] = useState({
     email: "",
     password: "",
   });
+
+  const [errors, setErrors] = useState({});
 
   const changeHandler = (e) => {
     setValues((state) => ({
@@ -17,13 +33,10 @@ export default function Login({ onLogin }) {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    if (!values.email || !values.password) {
-      alert("Email and password are required!");
-      return;
-    }
+    const newErrors = validate(values);
+    setErrors(newErrors);
 
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(values.email)) {
-      alert("Please enter a valid email!");
+    if (Object.keys(newErrors).length > 0) {
       return;
     }
 
@@ -35,7 +48,7 @@ export default function Login({ onLogin }) {
       <div className="container">
         <h1 className="editorial-title page-hero-title">Login</h1>
 
-        <form onSubmit={submitHandler} style={{ marginTop: 40, maxWidth: 480 }}>
+        <form onSubmit={submitHandler} noValidate style={{ marginTop: 40, maxWidth: 480 }}>
           <div className="field">
             <label htmlFor="email">Email</label>
             <input
@@ -45,6 +58,7 @@ export default function Login({ onLogin }) {
               value={values.email}
               onChange={changeHandler}
             />
+            {errors.email && <p className="field-error">{errors.email}</p>}
           </div>
 
           <div className="field">
@@ -56,6 +70,7 @@ export default function Login({ onLogin }) {
               value={values.password}
               onChange={changeHandler}
             />
+            {errors.password && <p className="field-error">{errors.password}</p>}
           </div>
 
           <button type="submit" className="btn btn-solid">
