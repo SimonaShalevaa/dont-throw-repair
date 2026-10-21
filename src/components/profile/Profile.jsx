@@ -8,6 +8,7 @@ export default function Profile() {
   const [profile, setProfile] = useState(null);
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     setIsLoading(true);
@@ -20,7 +21,7 @@ export default function Profile() {
         setProfile(profiles[0] || null);
         setItems(userItems);
       })
-      .catch((err) => alert(err.message))
+      .catch((err) => setError(err.message))
       .finally(() => setIsLoading(false));
   }, [userId]);
 
@@ -29,6 +30,16 @@ export default function Profile() {
       <section className="page-hero">
         <div className="container">
           <p className="lede">Loading...</p>
+        </div>
+      </section>
+    );
+  }
+
+  if (error) {
+    return (
+      <section className="page-hero">
+        <div className="container">
+          <p className="form-error">{error}</p>
         </div>
       </section>
     );

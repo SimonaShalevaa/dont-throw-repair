@@ -6,6 +6,8 @@ import ItemCard from "../common-components/ItemCard";
 
 export default function Hero() {
   const [latestItems, setLatestItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const abortController = new AbortController();
@@ -13,10 +15,14 @@ export default function Hero() {
     request("items?order=created_at.desc&limit=3", "GET", null, {
       signal: abortController.signal,
     })
-      .then(setLatestItems)
+      .then((result) => {
+        setLatestItems(result);
+        setIsLoading(false);
+      })
       .catch((err) => {
         if (err.name !== "AbortError") {
-          alert(err.message);
+          setError(err.message);
+          setIsLoading(false);
         }
       });
 
@@ -104,11 +110,14 @@ export default function Hero() {
             </Link>
           </div>
           <div className="product-grid">
-            {latestItems.length > 0 ? (
-              latestItems.map((item) => <ItemCard key={item.id} {...item} />)
-            ) : (
+            {isLoading && <p className="lede">Loading...</p>}
+            {error && <p className="form-error">{error}</p>}
+            {!isLoading && !error && latestItems.length === 0 && (
               <p className="no-articles">No items yet</p>
             )}
+            {latestItems.map((item) => (
+              <ItemCard key={item.id} {...item} />
+            ))}
           </div>
         </div>
       </div>

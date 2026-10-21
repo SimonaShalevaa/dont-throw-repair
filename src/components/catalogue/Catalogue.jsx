@@ -4,11 +4,14 @@ import ItemCard from "../common-components/ItemCard";
 
 export default function Catalogue() {
   const [items, setItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     request("items?order=created_at.desc")
       .then(setItems)
-      .catch((err) => alert(err.message));
+      .catch((err) => setError(err.message))
+      .finally(() => setIsLoading(false));
   }, []);
 
   return (
@@ -34,11 +37,14 @@ export default function Catalogue() {
       <div className="catalogue-section">
         <div className="container">
           <div className="product-grid">
-            {items.length > 0 ? (
-              items.map((item) => <ItemCard key={item.id} {...item} />)
-            ) : (
+            {isLoading && <p className="lede">Loading...</p>}
+            {error && <p className="form-error">{error}</p>}
+            {!isLoading && !error && items.length === 0 && (
               <h3 className="no-articles">No items yet</h3>
             )}
+            {items.map((item) => (
+              <ItemCard key={item.id} {...item} />
+            ))}
           </div>
         </div>
       </div>
