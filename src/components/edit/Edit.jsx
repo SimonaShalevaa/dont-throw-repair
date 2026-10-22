@@ -63,7 +63,7 @@ export default function Edit() {
   }
 
   if (item.ownerId !== user?.id) {
-    return <Navigate to={`/items/${itemId}`} />;
+    return <Navigate to={`/items/${itemId}`} replace />;
   }
 
   return (

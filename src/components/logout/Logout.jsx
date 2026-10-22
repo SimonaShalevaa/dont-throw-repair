@@ -9,5 +9,5 @@ export default function Logout() {
     logout();
   }, [logout]);
 
-  return <Navigate to="/" />;
+  return <Navigate to="/" replace />;
 }
