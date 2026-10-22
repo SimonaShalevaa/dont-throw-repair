@@ -43,22 +43,22 @@ export default function Footer() {
               <h4>Repair Tips</h4>
               <ul>
                 <li>
-                  <Link to="/repair-tips">
+                  <Link to="/repair-tips#before-you-throw">
                     Before you throw it away
                   </Link>
                 </li>
                 <li>
-                  <Link to="/repair-tips">
+                  <Link to="/repair-tips#tool-kit">
                     Basic tool kit
                   </Link>
                 </li>
                 <li>
-                  <Link to="/repair-tips">
+                  <Link to="/repair-tips#common-fixes">
                     Common fixes
                   </Link>
                 </li>
                 <li>
-                  <Link to="/repair-tips">
+                  <Link to="/repair-tips#community">
                     Community
                   </Link>
                 </li>

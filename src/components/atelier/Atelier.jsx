@@ -1,6 +1,22 @@
-import { Link } from "react-router";
+import { useEffect } from "react";
+import { Link, useLocation } from "react-router";
+import "./atelier.css";
 
 export default function Atelier() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const section = document.getElementById(location.hash.slice(1));
+
+      if (section) {
+        section.scrollIntoView();
+      }
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [location.hash]);
+
   return (
     <section className="page" id="page-atelier">
           <div className="page-hero">
@@ -22,7 +38,7 @@ export default function Atelier() {
             </div>
           </div>
           {/* Before you throw it away */}
-          <div className="atelier-block" id="at-philosophy">
+          <div className="atelier-block" id="before-you-throw">
             <div className="container split">
               <div className="split-content reveal">
                 <span className="eyebrow">Before you throw it away</span>
@@ -48,7 +64,7 @@ export default function Atelier() {
             </div>
           </div>
           {/* Basic tool kit */}
-          <div className="band band-slice" id="at-provenance">
+          <div className="band band-slice" id="tool-kit">
             <div className="container">
               <div className="section-head reveal">
                 <div>
@@ -91,7 +107,7 @@ export default function Atelier() {
             </div>
           </div>
           {/* Common fixes */}
-          <div className="atelier-block" id="at-woodcraft">
+          <div className="atelier-block" id="common-fixes">
             <div className="container split">
               <div className="frame reveal">
                 <img
@@ -123,7 +139,7 @@ export default function Atelier() {
             </div>
           </div>
           {/* Community */}
-          <div className="atelier-block" id="at-press">
+          <div className="atelier-block" id="community">
             <div className="container">
               <div className="section-head reveal">
                 <div>

@@ -44,16 +44,16 @@ export default function Header() {
               <ul className="dropdown">
                 <li className="drop-label">Guides</li>
                 <li>
-                  <Link to="/repair-tips">Before you throw it away</Link>
+                  <Link to="/repair-tips#before-you-throw">Before you throw it away</Link>
                 </li>
                 <li>
-                  <Link to="/repair-tips">Basic tool kit</Link>
+                  <Link to="/repair-tips#tool-kit">Basic tool kit</Link>
                 </li>
                 <li>
-                  <Link to="/repair-tips">Common fixes</Link>
+                  <Link to="/repair-tips#common-fixes">Common fixes</Link>
                 </li>
                 <li>
-                  <Link to="/repair-tips">Community</Link>
+                  <Link to="/repair-tips#community">Community</Link>
                 </li>
               </ul>
             </li>
