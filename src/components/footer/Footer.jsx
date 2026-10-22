@@ -18,22 +18,22 @@ export default function Footer() {
               <h4>Catalog</h4>
               <ul>
                 <li>
-                  <Link to="/catalog">
+                  <Link to="/catalog?category=Furniture">
                     Furniture
                   </Link>
                 </li>
                 <li>
-                  <Link to="/catalog">
+                  <Link to="/catalog?category=free">
                     Free to take
                   </Link>
                 </li>
                 <li>
-                  <Link to="/catalog">
+                  <Link to="/catalog?category=Electronics">
                     Electronics
                   </Link>
                 </li>
                 <li>
-                  <Link to="/catalog">
+                  <Link to="/catalog?category=Textiles%20%26%20clothes">
                     Textiles &amp; clothes
                   </Link>
                 </li>

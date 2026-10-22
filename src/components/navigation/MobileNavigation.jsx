@@ -27,16 +27,16 @@ export default function MobileNavigation() {
           </div>
           <ul className="m-sub">
             <li>
-              <Link to="/catalog">Furniture</Link>
+              <Link to="/catalog?category=Furniture">Furniture</Link>
             </li>
             <li>
-              <Link to="/catalog">Free to take</Link>
+              <Link to="/catalog?category=free">Free to take</Link>
             </li>
             <li>
-              <Link to="/catalog">Electronics</Link>
+              <Link to="/catalog?category=Electronics">Electronics</Link>
             </li>
             <li>
-              <Link to="/catalog">Textiles &amp; clothes</Link>
+              <Link to="/catalog?category=Textiles%20%26%20clothes">Textiles &amp; clothes</Link>
             </li>
           </ul>
         </li>
