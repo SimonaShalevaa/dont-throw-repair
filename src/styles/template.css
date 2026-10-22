@@ -6,15 +6,15 @@
 /* ============ TOKENS ============ */
 :root {
   --bg-pure-white: #FFFFFF;      /* Absolute crisp pure white base */
-  --surface-diagonal: #E0F2FE;   /* Pale ice blue for 80-degree diagonal slices */
+  --surface-diagonal: #F3ECE2;   /* Warm light beige for 80-degree diagonal slices */
   --text-ink: #1B1B24;           /* Cool midnight ink, never pure black */
-  --text-muted: #68717C;         /* Cool slate grey for captions and secondary text */
+  --text-muted: #7A6E63;         /* Warm grey-brown for captions and secondary text */
   --accent-crimson: #C92A2A;     /* Bold crimson for active tabs, buttons and links */
-  --accent-violet: #9B72CB;      /* Soft violet for hovers and editorial accents */
-  --hover-ice: #CDE8FC;          /* Deeper ice blue for interactive states */
-  --border-delicate: #D6E4EF;
+  --accent-violet: #9C6B47;      /* Warm brown for hovers and editorial accents */
+  --hover-ice: #E8DCCB;          /* Deeper beige for interactive states */
+  --border-delicate: #E6DCCF;
   --crimson-tint: rgba(201, 42, 42, 0.08);
-  --violet-tint: rgba(155, 114, 203, 0.10);
+  --violet-tint: rgba(176, 137, 94, 0.14);
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-soft: cubic-bezier(0.4, 0.14, 0.3, 1);
   --font-ui: 'Plus Jakarta Sans', sans-serif;
@@ -453,7 +453,7 @@ main { min-height: 70vh; }
   appearance: none;
 }
 .field textarea { min-height: 150px; resize: vertical; }
-.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--accent-crimson); background: #FBFDFF; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--accent-crimson); background: #FDFAF5; }
 .form-note { display: none; margin-top: 24px; padding: 18px 22px; border: 1px solid var(--accent-crimson); color: var(--accent-crimson); font-size: 14px; font-weight: 500; }
 .form-note.show { display: block; }
 

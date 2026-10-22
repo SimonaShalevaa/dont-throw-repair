@@ -24,9 +24,9 @@
 }
 
 .offers .offers-title {
-  font-size: 32px;
+  font-size: 38px;
   margin: 0 0 10px;
-  color: #4a525c;
+  color: var(--text-muted);
 }
 
 .offers-empty {
