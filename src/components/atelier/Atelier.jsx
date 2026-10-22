@@ -40,8 +40,8 @@ export default function Atelier() {
               </div>
               <div className="frame reveal">
                 <img
-                  src="/images/lumen-ph.jpg"
-                  alt="Notes and sketches of a repair pinned to a wall"
+                  src="/images/before-throw.jpg"
+                  alt="An old floor lamp"
                   loading="lazy"
                 />
               </div>
@@ -95,8 +95,8 @@ export default function Atelier() {
             <div className="container split">
               <div className="frame reveal">
                 <img
-                  src="/images/lumen-wood.jpg"
-                  alt="Hands repairing a wooden board"
+                  src="/images/common-fixes.jpg"
+                  alt="Hands repairing a sewing machine with a screwdriver"
                   loading="lazy"
                 />
               </div>

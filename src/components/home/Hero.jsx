@@ -64,15 +64,15 @@ export default function Hero() {
             </span>
             <div className="frame hero-img-main">
               <img
-                src="/images/lumen-hero.jpg"
-                alt="An old wooden chair ready for repair"
+                src="/images/repair-hero.jpg"
+                alt="Hands repairing a vacuum cleaner motor on a workbench"
                 loading="eager"
               />
             </div>
             <div className="frame hero-img-detail">
               <img
-                src="/images/lumen-detail.jpg"
-                alt="Close detail of a wooden joint"
+                src="/images/repair-detail.jpg"
+                alt="Close detail of hands fixing a small part"
                 loading="lazy"
               />
             </div>
@@ -162,8 +162,8 @@ export default function Hero() {
         <div className="container split">
           <div className="frame reveal">
             <img
-              src="/images/lumen-atelier.jpg"
-              alt="A workbench with hand tools"
+              src="/images/free-to-take.jpg"
+              alt="A pile of old chairs waiting for a new owner"
               loading="lazy"
             />
           </div>
