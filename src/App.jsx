@@ -1,23 +1,23 @@
-import { Route, Routes, useNavigate } from "react-router";
-import Atelier from "./components/atelier/Atelier";
-import Catalogue from "./components/catalogue/Catalogue";
-import Footer from "./components/footer/Footer";
-import Header from "./components/header/Header";
-import Hero from "./components/home/Hero";
-import Inquire from "./components/inquire/Inquire";
-import MobileNavigation from "./components/navigation/MobileNavigation";
-import Details from "./components/details/Details";
-import Edit from "./components/edit/Edit";
-import Profile from "./components/profile/Profile";
-import Login from "./components/login/Login";
-import Register from "./components/register/Register";
-import Logout from "./components/logout/Logout";
-import NotFound from "./components/not-found/NotFound";
 import { useState } from "react";
+import { Route, Routes, useNavigate } from "react-router";
 import { authApi } from "./api";
 import AuthContext from "./contexts/auth-context";
 import PrivateRoute from "./guards/PrivateRoute";
 import GuestRoute from "./guards/GuestRoute";
+import Header from "./components/header/Header";
+import MobileNavigation from "./components/navigation/MobileNavigation";
+import Footer from "./components/footer/Footer";
+import Hero from "./components/home/Hero";
+import Catalogue from "./components/catalogue/Catalogue";
+import Atelier from "./components/atelier/Atelier";
+import Details from "./components/details/Details";
+import Profile from "./components/profile/Profile";
+import Inquire from "./components/inquire/Inquire";
+import Edit from "./components/edit/Edit";
+import Login from "./components/login/Login";
+import Register from "./components/register/Register";
+import Logout from "./components/logout/Logout";
+import NotFound from "./components/not-found/NotFound";
 
 function App() {
   const navigate = useNavigate();
