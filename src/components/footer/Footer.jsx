@@ -87,18 +87,9 @@ export default function Footer() {
           </div>
           <div className="footer-base">
             <span>
-              © 2026 Dont-throw-repair. React course project.
+              © 2026 Dont-throw-repair.
             </span>
-            <span>
-              Design:{" "}
-              <a
-                href="https://templatemo.com"
-                target="_blank"
-                rel="nofollow noopener"
-              >
-                TemplateMo
-              </a>
-            </span>
+            
           </div>
         </div>
       </footer>

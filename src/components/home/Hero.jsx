@@ -133,24 +133,24 @@ export default function Hero() {
           </div>
           <div className="materials-grid reveal">
             <div className="material-cell">
-              <span className="material-num">i.</span>
+              <span className="material-num">01</span>
               <h3>Post it</h3>
               <p>
                 Take a photo of the broken thing and describe what is wrong.
               </p>
             </div>
             <div className="material-cell">
-              <span className="material-num">ii.</span>
+              <span className="material-num">02</span>
               <h3>Get advice</h3>
               <p>Other users suggest how to fix it or offer to help.</p>
             </div>
             <div className="material-cell">
-              <span className="material-num">iii.</span>
+              <span className="material-num">03</span>
               <h3>Fix it</h3>
               <p>Try the advice and mark the one that worked.</p>
             </div>
             <div className="material-cell">
-              <span className="material-num">iv.</span>
+              <span className="material-num">04</span>
               <h3>Or give it away</h3>
               <p>Can't fix it? Someone else will be happy to.</p>
             </div>
