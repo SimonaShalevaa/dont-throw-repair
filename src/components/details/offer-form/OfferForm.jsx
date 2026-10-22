@@ -24,7 +24,7 @@ export default function OfferForm({ onCreate }) {
   };
 
   return (
-    <form onSubmit={submitHandler} style={{ marginTop: 24 }}>
+    <form onSubmit={submitHandler} className="offer-form">
       <div className="field">
         <label htmlFor="offer">Offer help</label>
         <textarea

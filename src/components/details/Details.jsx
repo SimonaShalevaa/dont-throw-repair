@@ -4,6 +4,7 @@ import { itemsApi, offersApi } from "../../api";
 import AuthContext from "../../contexts/auth-context";
 import OfferForm from "./offer-form/OfferForm";
 import OfferList from "./offer-list/OfferList";
+import "./details.css";
 
 export default function Details() {
   const { itemId } = useParams();
@@ -105,7 +106,7 @@ export default function Details() {
       <section className="page-hero">
         <div className="container">
           <h1 className="editorial-title page-hero-title">Item not found</h1>
-          <Link to="/catalog" className="text-link" style={{ marginTop: 24 }}>
+          <Link to="/catalog" className="text-link back-link">
             Back to catalog
           </Link>
         </div>
@@ -125,17 +126,17 @@ export default function Details() {
           <span className="eyebrow">
             {item.category} · {item.city}
           </span>
-          <h1 className="editorial-title">{item.title}</h1>
+          <h1 className="editorial-title item-title">{item.title}</h1>
           {item.status !== "needs_help" && (
             <span className="eyebrow">{item.status === "fixed" ? "Fixed ✓" : "Given away ✓"}</span>
           )}
           <p className="lede">{item.description}</p>
-          <p className="lede" style={{ marginTop: 16 }}>
+          <p className="lede posted-by">
             Posted by{" "}
             <Link to={`/users/${item.ownerId}`}>{item.profiles?.username}</Link>
           </p>
           {isOwner && (
-            <div style={{ display: "flex", gap: 16, marginTop: 34 }}>
+            <div className="owner-actions">
               <Link to={`/items/${item.id}/edit`} className="btn">
                 Edit
               </Link>
@@ -145,8 +146,8 @@ export default function Details() {
             </div>
           )}
 
-          <div className="section" style={{ paddingTop: 40 }}>
-            <h2 className="editorial-title">Offers</h2>
+          <div className="offers">
+            <h2 className="offers-title">Offers</h2>
 
             <OfferList
               offers={offers}

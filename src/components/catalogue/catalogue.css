@@ -1,0 +1,18 @@
+.catalogue-accent {
+  color: var(--accent-violet);
+}
+
+.catalogue-lede {
+  margin-top: 24px;
+}
+
+.show-all {
+  margin-top: 24px;
+}
+
+.no-articles {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: var(--text-muted);
+  padding: 60px 0;
+}

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useSearchParams } from "react-router";
 import request from "../../utils/request";
 import ItemCard from "../common-components/ItemCard";
+import "./catalogue.css";
 
 export default function Catalogue() {
   const [items, setItems] = useState([]);
@@ -34,19 +35,16 @@ export default function Catalogue() {
           </span>
           <h1 className="editorial-title page-hero-title">
             Things worth{" "}
-            <span
-              className="editorial-italic"
-              style={{ color: "var(--accent-violet)" }}
-            >
+            <span className="editorial-italic catalogue-accent">
               saving
             </span>
           </h1>
-          <p className="lede" style={{ marginTop: 24 }}>
+          <p className="lede catalogue-lede">
             Browse items that need repair or are free to take. Pick a category
             and see where you can help.
           </p>
           {category && (
-            <Link to="/catalog" className="text-link" style={{ marginTop: 24 }}>
+            <Link to="/catalog" className="text-link show-all">
               Show all items
             </Link>
           )}

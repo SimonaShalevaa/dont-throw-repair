@@ -1,0 +1,93 @@
+.back-link {
+  margin-top: 24px;
+}
+
+.item-title {
+  margin-top: 22px;
+  margin-bottom: 14px;
+}
+
+.posted-by {
+  margin-top: 16px;
+}
+
+.owner-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 34px;
+}
+
+.offers {
+  margin-top: 60px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border-delicate);
+}
+
+.offers .offers-title {
+  font-size: 32px;
+  margin: 0 0 10px;
+  color: #4a525c;
+}
+
+.offers-empty {
+  color: var(--text-muted);
+  margin-top: 16px;
+}
+
+.offer-list {
+  list-style: none;
+  margin-top: 16px;
+}
+
+.offer {
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border-delicate);
+}
+
+.offer-helped {
+  border-left: 3px solid var(--accent-crimson);
+  padding-left: 16px;
+}
+
+.offer-text {
+  line-height: 1.6;
+}
+
+.offer-author {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.offer-badge {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent-crimson);
+}
+
+.offer-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.offer-delete {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.offer-delete:hover {
+  color: var(--accent-crimson);
+}
+
+.offer-form {
+  margin-top: 24px;
+}
