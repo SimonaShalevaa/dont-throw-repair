@@ -18,6 +18,7 @@ import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import Logout from "./components/logout/Logout";
 import NotFound from "./components/not-found/NotFound";
+import ScrollToTop from "./components/scroll-to-top/ScrollToTop";
 
 function App() {
   const navigate = useNavigate();
@@ -99,6 +100,7 @@ function App() {
 
   return (
     <AuthContext.Provider value={contextValue}>
+      <ScrollToTop />
       <Header />
       <MobileNavigation />
 
