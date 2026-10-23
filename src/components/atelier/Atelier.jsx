@@ -1,9 +1,24 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router";
+import request from "../../utils/request";
 import "./atelier.css";
 
 export default function Atelier() {
   const location = useLocation();
+  const [stats, setStats] = useState(null);
+
+  useEffect(() => {
+    Promise.all([request("items?select=status"), request("offers?select=id")])
+      .then(([items, offers]) => {
+        setStats({
+          posted: items.length,
+          fixed: items.filter((item) => item.status === "fixed").length,
+          given: items.filter((item) => item.status === "given").length,
+          offers: offers.length,
+        });
+      })
+      .catch(() => setStats(null));
+  }, []);
 
   useEffect(() => {
     if (location.hash) {
@@ -151,28 +166,28 @@ export default function Atelier() {
               </div>
               <div className="awards-grid">
                 <div className="award-cell reveal">
-                  <span className="award-year">120</span>
+                  <span className="award-year">{stats ? stats.posted : "–"}</span>
                   <h3>Items posted</h3>
                   <p>
                     Broken and old things shared by the community.
                   </p>
                 </div>
                 <div className="award-cell reveal">
-                  <span className="award-year">85</span>
+                  <span className="award-year">{stats ? stats.fixed : "–"}</span>
                   <h3>Items fixed</h3>
                   <p>
                     Repaired with advice from other users.
                   </p>
                 </div>
                 <div className="award-cell reveal">
-                  <span className="award-year">30</span>
+                  <span className="award-year">{stats ? stats.given : "–"}</span>
                   <h3>Items given away</h3>
                   <p>
                     Found a new owner instead of the trash.
                   </p>
                 </div>
                 <div className="award-cell reveal">
-                  <span className="award-year">300</span>
+                  <span className="award-year">{stats ? stats.offers : "–"}</span>
                   <h3>Pieces of advice</h3>
                   <p>
                     Tips and ideas shared under the items.
