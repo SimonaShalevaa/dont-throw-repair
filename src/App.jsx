@@ -22,6 +22,7 @@ import ScrollToTop from "./components/scroll-to-top/ScrollToTop";
 
 function App() {
   const navigate = useNavigate();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const [auth, setAuth] = useState(() => {
     const saved = JSON.parse(localStorage.getItem("auth"));
@@ -101,8 +102,11 @@ function App() {
   return (
     <AuthContext.Provider value={contextValue}>
       <ScrollToTop />
-      <Header />
-      <MobileNavigation />
+      <Header
+        isMenuOpen={isMenuOpen}
+        onMenuClick={() => setIsMenuOpen((state) => !state)}
+      />
+      <MobileNavigation isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
 
       <main>
         <Routes>

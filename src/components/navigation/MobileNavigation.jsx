@@ -1,11 +1,29 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router";
 import AuthContext from "../../contexts/auth-context";
+import "./mobile-navigation.css";
 
-export default function MobileNavigation() {
+export default function MobileNavigation({ isOpen, onClose }) {
   const { isAuthenticated, user } = useContext(AuthContext);
+  const [openSub, setOpenSub] = useState("");
+
+  const toggleSub = (name) => {
+    setOpenSub(openSub === name ? "" : name);
+  };
+
+  const linkClickHandler = (e) => {
+    if (e.target.tagName === "A") {
+      setOpenSub("");
+      onClose();
+    }
+  };
+
   return (
-    <nav className="mobile-nav" id="mobileNav" aria-label="Mobile">
+    <nav
+      className={isOpen ? "mobile-nav open" : "mobile-nav"}
+      aria-label="Mobile"
+      onClick={linkClickHandler}
+    >
       <ul>
         <li>
           <Link className="m-link" to="/">
@@ -18,14 +36,16 @@ export default function MobileNavigation() {
               Catalog
             </Link>
             <button
-              className="m-sub-toggle"
-              aria-expanded="false"
+              type="button"
+              className={openSub === "catalog" ? "m-sub-toggle open" : "m-sub-toggle"}
+              aria-expanded={openSub === "catalog"}
               aria-label="Toggle catalog submenu"
+              onClick={() => toggleSub("catalog")}
             >
               <span className="caret" />
             </button>
           </div>
-          <ul className="m-sub">
+          <ul className={openSub === "catalog" ? "m-sub open" : "m-sub"}>
             <li>
               <Link to="/catalog?category=Furniture">Furniture</Link>
             </li>
@@ -46,14 +66,16 @@ export default function MobileNavigation() {
               Repair Tips
             </Link>
             <button
-              className="m-sub-toggle"
-              aria-expanded="false"
+              type="button"
+              className={openSub === "tips" ? "m-sub-toggle open" : "m-sub-toggle"}
+              aria-expanded={openSub === "tips"}
               aria-label="Toggle repair tips submenu"
+              onClick={() => toggleSub("tips")}
             >
               <span className="caret" />
             </button>
           </div>
-          <ul className="m-sub">
+          <ul className={openSub === "tips" ? "m-sub open" : "m-sub"}>
             <li>
               <Link to="/repair-tips#before-you-throw">Before you throw it away</Link>
             </li>

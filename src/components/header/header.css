@@ -6,3 +6,10 @@
 .nav-item.has-drop.drop-closed .caret {
   transform: rotate(45deg) translateY(-2px);
 }
+
+@media (max-width: 600px) {
+  .header-inner .brand {
+    font-size: 13px;
+    letter-spacing: 0.08em;
+  }
+}

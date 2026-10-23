@@ -1,0 +1,3 @@
+.m-sub-toggle.open .caret {
+  transform: rotate(225deg) translateY(-2px);
+}

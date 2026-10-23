@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import AuthContext from "../../contexts/auth-context";
 import "./header.css";
 
-export default function Header() {
+export default function Header({ isMenuOpen, onMenuClick }) {
   const { isAuthenticated, user } = useContext(AuthContext);
   const [closedMenu, setClosedMenu] = useState("");
 
@@ -120,10 +120,11 @@ export default function Header() {
           )}
         </nav>
         <button
-          className="menu-toggle"
-          id="menuToggle"
+          type="button"
+          className={isMenuOpen ? "menu-toggle open" : "menu-toggle"}
           aria-label="Open menu"
-          aria-expanded="false"
+          aria-expanded={isMenuOpen}
+          onClick={onMenuClick}
         >
           <span className="bar" />
           <span className="bar" />
