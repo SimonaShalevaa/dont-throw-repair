@@ -147,7 +147,7 @@ export default function Details() {
           )}
 
           <div className="offers">
-            <h2 className="offers-title">Offers</h2>
+            <h2 className="editorial-title offers-title">Offers</h2>
 
             <OfferList
               offers={offers}
