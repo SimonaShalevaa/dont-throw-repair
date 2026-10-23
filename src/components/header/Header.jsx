@@ -1,9 +1,17 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router";
 import AuthContext from "../../contexts/auth-context";
+import "./header.css";
 
 export default function Header() {
   const { isAuthenticated, user } = useContext(AuthContext);
+  const [closedMenu, setClosedMenu] = useState("");
+
+  const closeMenu = (e, name) => {
+    e.currentTarget.blur();
+    setClosedMenu(name);
+  };
+
   return (
     <header className="site-header">
       <div className="container header-inner">
@@ -17,43 +25,63 @@ export default function Header() {
                 Home
               </Link>
             </li>
-            <li className="nav-item has-drop">
-              <Link className="nav-link" to="/catalog" aria-haspopup="true">
+            <li
+              className={
+                closedMenu === "catalog" ? "nav-item has-drop drop-closed" : "nav-item has-drop"
+              }
+              onMouseLeave={() => setClosedMenu("")}
+            >
+              <Link
+                className="nav-link"
+                to="/catalog"
+                aria-haspopup="true"
+                onClick={(e) => closeMenu(e, "catalog")}
+              >
                 Catalog <span className="caret" />
               </Link>
               <ul className="dropdown">
                 <li className="drop-label">Categories</li>
                 <li>
-                  <Link to="/catalog?category=Furniture">Furniture</Link>
+                  <Link to="/catalog?category=Furniture" onClick={(e) => closeMenu(e, "catalog")}>Furniture</Link>
                 </li>
                 <li>
-                  <Link to="/catalog?category=Electronics">Electronics</Link>
+                  <Link to="/catalog?category=Electronics" onClick={(e) => closeMenu(e, "catalog")}>Electronics</Link>
                 </li>
                 <li>
-                  <Link to="/catalog?category=Textiles%20%26%20clothes">Textiles &amp; clothes</Link>
+                  <Link to="/catalog?category=Textiles%20%26%20clothes" onClick={(e) => closeMenu(e, "catalog")}>Textiles &amp; clothes</Link>
                 </li>
                 <li>
-                  <Link to="/catalog?category=free">Free to take</Link>
+                  <Link to="/catalog?category=free" onClick={(e) => closeMenu(e, "catalog")}>Free to take</Link>
                 </li>
               </ul>
             </li>
-            <li className="nav-item has-drop">
-              <Link className="nav-link" to="/repair-tips" aria-haspopup="true">
+            <li
+              className={
+                closedMenu === "tips" ? "nav-item has-drop drop-closed" : "nav-item has-drop"
+              }
+              onMouseLeave={() => setClosedMenu("")}
+            >
+              <Link
+                className="nav-link"
+                to="/repair-tips"
+                aria-haspopup="true"
+                onClick={(e) => closeMenu(e, "tips")}
+              >
                 Repair Tips <span className="caret" />
               </Link>
               <ul className="dropdown">
                 <li className="drop-label">Guides</li>
                 <li>
-                  <Link to="/repair-tips#before-you-throw">Before you throw it away</Link>
+                  <Link to="/repair-tips#before-you-throw" onClick={(e) => closeMenu(e, "tips")}>Before you throw it away</Link>
                 </li>
                 <li>
-                  <Link to="/repair-tips#tool-kit">Basic tool kit</Link>
+                  <Link to="/repair-tips#tool-kit" onClick={(e) => closeMenu(e, "tips")}>Basic tool kit</Link>
                 </li>
                 <li>
-                  <Link to="/repair-tips#common-fixes">Common fixes</Link>
+                  <Link to="/repair-tips#common-fixes" onClick={(e) => closeMenu(e, "tips")}>Common fixes</Link>
                 </li>
                 <li>
-                  <Link to="/repair-tips#community">Community</Link>
+                  <Link to="/repair-tips#community" onClick={(e) => closeMenu(e, "tips")}>Community</Link>
                 </li>
               </ul>
             </li>

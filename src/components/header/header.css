@@ -1,0 +1,8 @@
+.nav-item.has-drop.drop-closed .dropdown {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.nav-item.has-drop.drop-closed .caret {
+  transform: rotate(45deg) translateY(-2px);
+}
