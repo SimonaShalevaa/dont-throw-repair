@@ -4,6 +4,8 @@
 
 **Test account:** reviewer@test.com / reviewer123 (or register a new one)
 
+**Backend:** Supabase (free plan). If the data does not load, see the note in section 6.
+
 ## Setup
 
 1. Clone the repository and open the folder:
@@ -125,6 +127,8 @@ Pages with data from the server: Home, Catalog, Details, Profile, Edit, Repair T
 - **Real backend: Supabase** (PostgreSQL database + authentication).
 - Requests are made with `fetch` through one helper (`src/utils/request.js`) that adds the API key; functions for each table are in `src/api/` (`auth-api.js`, `items-api.js`, `offers-api.js`).
 - Tables: `profiles`, `items`, `offers`. Row Level Security: everyone can read; only the logged-in owner can create, change or delete their own items and offers.
+- **Hosting and availability:** the frontend is on Netlify and the database is on Supabase (cloud). Both are always online – there is no separate server that needs to "wake up". All data is stored in the Supabase database, so it stays the same between visits.
+- **Note about the free plan:** Supabase may pause a free project after about a week without any activity. If the items do not load, the project is probably paused (the data is not lost). Please contact me and I will restore it.
 
 ## 7. Data Operations (CRUD)
 
