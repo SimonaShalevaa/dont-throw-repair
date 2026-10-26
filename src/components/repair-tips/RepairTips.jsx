@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router";
 import request from "../../utils/request";
-import "./atelier.css";
+import "./repair-tips.css";
 
-export default function Atelier() {
+export default function RepairTips() {
   const location = useLocation();
   const [stats, setStats] = useState(null);
 
@@ -33,7 +33,7 @@ export default function Atelier() {
   }, [location.hash]);
 
   return (
-    <section className="page" id="page-atelier">
+    <section className="page" id="page-repair-tips">
           <div className="page-hero">
             <div className="container reveal">
               <span className="eyebrow">Repair Tips</span>

@@ -9,7 +9,7 @@ import MobileNavigation from "./components/navigation/MobileNavigation";
 import Footer from "./components/footer/Footer";
 import Hero from "./components/home/Hero";
 import Catalogue from "./components/catalogue/Catalogue";
-import Atelier from "./components/atelier/Atelier";
+import RepairTips from "./components/repair-tips/RepairTips";
 import Details from "./components/details/Details";
 import Profile from "./components/profile/Profile";
 import Inquire from "./components/inquire/Inquire";
@@ -112,7 +112,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/catalog" element={<Catalogue />} />
-          <Route path="/repair-tips" element={<Atelier />} />
+          <Route path="/repair-tips" element={<RepairTips />} />
           <Route path="/items/:itemId" element={<Details />} />
           <Route path="/users/:userId" element={<Profile />} />
 

@@ -191,7 +191,7 @@ Errors are shown in red under each field. While a request is running, the submit
 ### Component Styling
 
 - One main external CSS file, `src/styles/template.css` (from the Lumen Eighty template), imported once in `main.jsx`. The colors are CSS variables, so the whole site uses one palette.
-- Styles for a single component are in a CSS file next to it: `atelier.css`, `catalogue.css`, `details.css`, `header.css`, `mobile-navigation.css`.
+- Styles for a single component are in a CSS file next to it: `repair-tips.css`, `catalogue.css`, `details.css`, `header.css`, `mobile-navigation.css`.
 - The site works on mobile: a menu button opens the mobile navigation.
 
 ## 10. Typical User Flow

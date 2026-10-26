@@ -17,7 +17,7 @@
 | --- | --- | --- |
 | `/` | Hero | everyone |
 | `/catalog` (`?category=...`) | Catalogue | everyone |
-| `/repair-tips` (`#section`) | Atelier | everyone |
+| `/repair-tips` (`#section`) | RepairTips | everyone |
 | `/items/:itemId` | Details | everyone |
 | `/users/:userId` | Profile | everyone |
 | `/create` | Inquire | logged in (PrivateRoute) |
@@ -46,7 +46,7 @@ Row Level Security: everyone can read; only the logged-in owner can create, upda
 ## Lifecycle examples
 
 - **Mount:** Catalogue loads all items once (`useEffect` with `[]`).
-- **Update:** Details loads the item and its offers again when `itemId` changes (`useEffect` with `[itemId]`); Atelier scrolls to a section when `location.hash` changes; ScrollToTop scrolls up when `pathname` changes.
+- **Update:** Details loads the item and its offers again when `itemId` changes (`useEffect` with `[itemId]`); RepairTips scrolls to a section when `location.hash` changes; ScrollToTop scrolls up when `pathname` changes.
 - **Unmount:** Hero aborts its request with `AbortController` in the cleanup function.
 
 ## Deploy
