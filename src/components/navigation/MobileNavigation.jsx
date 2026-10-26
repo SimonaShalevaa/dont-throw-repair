@@ -1,10 +1,10 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router";
-import AuthContext from "../../contexts/auth-context";
+import useAuth from "../../hooks/useAuth";
 import "./mobile-navigation.css";
 
 export default function MobileNavigation({ isOpen, onClose }) {
-  const { isAuthenticated, user } = useContext(AuthContext);
+  const { isAuthenticated, user } = useAuth();
   const [openSub, setOpenSub] = useState("");
 
   const toggleSub = (name) => {

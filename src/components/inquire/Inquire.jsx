@@ -1,11 +1,10 @@
-import { useContext } from "react";
 import { useNavigate } from "react-router";
 import { itemsApi } from "../../api";
-import AuthContext from "../../contexts/auth-context";
+import useAuth from "../../hooks/useAuth";
 import ItemForm from "../common-components/ItemForm";
 
 export default function Inquire() {
-  const { accessToken } = useContext(AuthContext);
+  const { accessToken } = useAuth();
   const navigate = useNavigate();
 
   const createHandler = async (values) => {

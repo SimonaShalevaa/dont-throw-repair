@@ -5,6 +5,7 @@
 - `src/api` – functions for the requests to Supabase: `auth-api.js` (register, login, logout), `items-api.js` (items CRUD), `offers-api.js` (offers), `index.js` (exports them as `authApi`, `itemsApi`, `offersApi`)
 - `src/utils/request.js` – one place that calls `fetch`, adds the API key and handles errors
 - `src/contexts/auth-context.js` – `AuthContext` (the logged-in user)
+- `src/hooks/useAuth.js` – custom hook that returns the data from `AuthContext` (`useContext(AuthContext)`)
 - `src/guards` – `PrivateRoute` and `GuestRoute`
 - `src/components` – one folder per page or component; component styles are in a CSS file next to the component
 - `src/components/common-components` – components used on more than one page: `ItemCard`, `ItemForm`

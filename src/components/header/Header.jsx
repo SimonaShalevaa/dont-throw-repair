@@ -1,10 +1,10 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router";
-import AuthContext from "../../contexts/auth-context";
+import useAuth from "../../hooks/useAuth";
 import "./header.css";
 
 export default function Header({ isMenuOpen, onMenuClick }) {
-  const { isAuthenticated, user } = useContext(AuthContext);
+  const { isAuthenticated, user } = useAuth();
   const [closedMenu, setClosedMenu] = useState("");
 
   const closeMenu = (e, name) => {

@@ -63,7 +63,7 @@ Many people throw away things that could be fixed with a little help. In Dont-th
 ### Authentication Flow
 
 - **When the app loads:** `App.jsx` reads the saved session from localStorage (in the first `useState`). If there is a session and it is not expired, the user is logged in.
-- **How authentication status is checked:** `isAuthenticated` in `AuthContext` is `true` when there is a session. The header menus, the route guards, Details and the create/edit pages read it with `useContext`.
+- **How authentication status is checked:** `isAuthenticated` in `AuthContext` is `true` when there is a session. The header menus, the route guards, Details and the create/edit pages read it with the custom hook `useAuth()`.
 - **On successful login or registration:** Supabase returns an access token, a refresh token, the expiry time and the user. The app saves them in state and in localStorage and navigates to Home. On registration the username is sent as user metadata, and a database trigger creates a row in the `profiles` table.
 - **On logout:** the `/logout` route sends a logout request to Supabase, then clears the session from state and localStorage and redirects to Home. The session is cleared even if the request fails.
 
@@ -177,7 +177,8 @@ Errors are shown in red under each field. While a request is running, the submit
 
 - **`useState`** – form values, loaded data, loading and error states, open menus.
 - **`useEffect`** – loading data from Supabase, scrolling to a section, scrolling to the top on page change.
-- **`useContext`** – reading the logged-in user from `AuthContext`.
+- **`useContext`** – reading the logged-in user from `AuthContext`, inside the custom hook below.
+- **Custom hook `useAuth`** (`src/hooks/useAuth.js`) – returns `useContext(AuthContext)`, so components get the auth data with one short call: `const { user } = useAuth();`.
 - **React Router hooks:** `useParams`, `useNavigate`, `useSearchParams`, `useLocation`.
 - **Mount:** Catalog loads all items once (`useEffect` with `[]`).
 - **Update:** Details loads the item and its offers again when `itemId` in the URL changes (`useEffect` with `[itemId]`); Repair Tips scrolls to a new section when the `#hash` changes.
@@ -186,7 +187,7 @@ Errors are shown in red under each field. While a request is running, the submit
 ### Context API
 
 - **`AuthContext`** shares `user`, `accessToken`, `isAuthenticated`, `register`, `login` and `logout`. The Provider is in `App.jsx`.
-- **Used by:** Header, MobileNavigation, PrivateRoute, GuestRoute, Logout, Inquire (create), Edit, Details.
+- **Used by** (through `useAuth()`): Header, MobileNavigation, PrivateRoute, GuestRoute, Logout, Inquire (create), Edit, Details.
 
 ### Component Styling
 

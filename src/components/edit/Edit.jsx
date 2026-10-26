@@ -1,12 +1,12 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, Navigate, useNavigate, useParams } from "react-router";
 import { itemsApi } from "../../api";
-import AuthContext from "../../contexts/auth-context";
+import useAuth from "../../hooks/useAuth";
 import ItemForm from "../common-components/ItemForm";
 
 export default function Edit() {
   const { itemId } = useParams();
-  const { user, accessToken } = useContext(AuthContext);
+  const { user, accessToken } = useAuth();
   const navigate = useNavigate();
   const [item, setItem] = useState(null);
   const [isLoading, setIsLoading] = useState(true);

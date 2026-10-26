@@ -1,7 +1,7 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router";
 import { itemsApi, offersApi } from "../../api";
-import AuthContext from "../../contexts/auth-context";
+import useAuth from "../../hooks/useAuth";
 import OfferForm from "./offer-form/OfferForm";
 import OfferList from "./offer-list/OfferList";
 import "./details.css";
@@ -11,7 +11,7 @@ export default function Details() {
   const [item, setItem] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [offers, setOffers] = useState([]);
-  const { user, accessToken, isAuthenticated } = useContext(AuthContext);
+  const { user, accessToken, isAuthenticated } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
